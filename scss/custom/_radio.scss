@@ -1,5 +1,5 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .singleradio {
   .radiolabel {
@@ -9,7 +9,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       @include translateY(-50%);
@@ -18,7 +18,7 @@
 
     &::before {
       @include square(20);
-      @include border(solid, 1, $primaryText);
+      // @include border(solid, 1, $primaryText);
       @include circle;
       background: $white;
       @include transitionsall;
@@ -26,7 +26,7 @@
 
     &::after {
       @include square(10);
-      background: $primary;
+      // background: $primary;
       @include circle;
       left: size(5);
       opacity: 0;
@@ -38,7 +38,7 @@
   .radiofield {
     &:checked ~ .radiolabel {
       &::before {
-        border-color: $primary;
+        // border-color: $primary;
       }
 
       &::after {
