@@ -10,10 +10,25 @@
   &-nav {
     @include w100;
     @include flex-center-between;
+    gap: size(14);
     padding: size(0) size(12);
 
     @include breakpoint(tab992) {
       padding: size(0) size(32);
+    }
+
+    .hamburger {
+      width: size(24);
+
+      &-button {
+        @include w100;
+        height: size(18);
+        @include flex-center;
+
+        svg {
+          @include wh100;
+        }
+      }
     }
 
     .logo {
