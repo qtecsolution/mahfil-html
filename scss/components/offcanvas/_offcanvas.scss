@@ -39,14 +39,12 @@
 
   &-header {
     .logo {
-      width: size(100);
-      height: size(24);
+      width: size(190);
+      height: size(48);
+      padding: size(8);
       @include flex-center;
-      overflow: hidden;
-      margin-left: 0;
 
       img {
-        @include wh100;
         object-fit: contain;
       }
     }

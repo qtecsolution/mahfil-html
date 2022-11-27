@@ -5,4 +5,162 @@
   background: $white;
   @include flex-center;
   @include w100;
+  @include border-single(bottom, solid, 1, $headerborder);
+
+  &-nav {
+    @include w100;
+    @include flex-center-between;
+    padding: size(0) size(12);
+
+    @include breakpoint(tab992) {
+      padding: size(0) size(32);
+    }
+
+    .logo {
+      width: size(150);
+      height: size(48);
+      @include flex-center;
+
+      @include breakpoint(tab992) {
+        width: size(190);
+        padding: size(8);
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .mobilemenu {
+      @include list-horizontal;
+      width: calc(100% - size(150));
+      justify-content: flex-end;
+
+      @include breakpoint(mobile768) {
+        display: none;
+      }
+
+      &-item {
+        position: relative;
+        padding: size(12) size(4);
+
+        .userdropdown {
+          position: absolute;
+          top: calc(100% + size(1));
+          right: 0;
+          background: $white;
+          box-shadow: $dropdownshadow;
+          width: size(160);
+          padding: size(12);
+          display: none;
+          @extend %animation;
+          @extend %slideUpIn;
+
+          .userlist {
+            @include list-vertical;
+
+            &-link {
+              @include flex-center-vert;
+              gap: size(12);
+              padding: size(10);
+              background: $white;
+              @include transitionsbackground;
+
+              .icon {
+                @include square(16);
+                @include flex-center;
+
+                svg {
+                  @include wh100;
+                }
+              }
+
+              .text {
+                color: $textPrimary;
+                @include font($primaryFont, 12, normal, normal, 12);
+              }
+
+              @include hover {
+                background: $gray-200;
+              }
+            }
+          }
+        }
+
+        @include hover {
+          .userdropdown {
+            display: block;
+          }
+        }
+      }
+
+      &-link {
+        @include square(28);
+        @include border(solid, 1, transparent);
+        @include circle;
+        @include flex-center;
+        padding: size(4);
+
+        svg {
+          @include wh100;
+        }
+
+        &.mobile {
+          border-color: $primary-dark;
+          padding: size(6);
+        }
+
+        &.search {
+          border-color: $gray-400;
+        }
+
+        &.live {
+          border-color: $danger;
+
+          @include hover {
+            background: $danger;
+
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+
+        &.upload {
+          background: $primary;
+
+          @include hover {
+            background: $white;
+            border-color: $primary;
+
+            svg {
+              path {
+                fill: $primary;
+              }
+            }
+          }
+        }
+
+        &.user {
+          @include circle;
+          padding: size(0);
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .desktopmenu {
+      display: none;
+
+      @include breakpoint(mobile768) {
+        display: block;
+      }
+    }
+  }
 }
