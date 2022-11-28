@@ -19,13 +19,65 @@
     <link rel="stylesheet" href="../assets/css/style.min.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-md-auto">
-          <div class="authentication"></div>
+    <!-- AUTHENTICATION START -->
+    <main class="authentication">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-lg-6 mx-md-auto">
+            <form class="authenticationform">
+              <div class="authenticationform-header">
+                <a href="../index.html" class="logo">
+                  <img src="../assets/images/logo/logo.svg" alt="logo" />
+                </a>
+
+                <div class="titlebox">
+                  <h1 class="title">Welcome back!</h1>
+                </div>
+              </div>
+
+              <div class="authenticationform-body">
+                <div class="inputbox">
+                  <label for="logmail" class="inputlabel">Email</label>
+                  <input
+                    type="email"
+                    id="logmail"
+                    class="inputfield"
+                    placeholder="Enter email address"
+                  />
+                </div>
+
+                <div class="info">
+                  <div class="inputbox">
+                    <label for="logpassword" class="inputlabel">Password</label>
+                    <input
+                      type="text"
+                      id="logpassword"
+                      class="inputfield"
+                      placeholder="Enter password"
+                    />
+                  </div>
+
+                  <div class="forgotlink">
+                    <a href="forgot.html" class="link">Forgot Password?</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="authenticationform-footer">
+                <div class="submit">
+                  <button type="submit" class="btn-submit">Log In</button>
+                </div>
+                <div class="authentictext">
+                  <span class="text">Don’t have an account?</span>
+                  <a href="register.html" class="link">Signup</a>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <!-- AUTHENTICATION END -->
 
     <!-- BOOTSTRAP JS -->
     <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
