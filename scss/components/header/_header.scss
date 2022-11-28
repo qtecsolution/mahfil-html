@@ -180,6 +180,61 @@
         display: none;
       }
 
+      .searchitem {
+        padding: size(17) 0;
+
+        .searchdropdown {
+          position: absolute;
+          top: calc(100% + size(1));
+          left: 0;
+          background: $white;
+          box-shadow: $dropdownshadow;
+          @include w100;
+          display: none;
+          @extend %animation;
+          @extend %slideDownIn;
+        }
+
+        .searchbox {
+          @include flex-center-vert;
+          @include border-single(bottom, solid, 1, $white);
+          @include transitionsall;
+
+          .btn-search {
+            width: size(48);
+            height: size(39);
+          }
+
+          .searchinput {
+            width: calc(100% - size(48));
+            height: size(39);
+
+            .searchfield {
+              @include setBgColor(transparent, $gray-900);
+              padding: size(8) size(16) size(8) size(0);
+              @include wh100;
+              font-size: size(14);
+              font-weight: 400;
+
+              &::placeholder {
+                color: $gray-500;
+              }
+            }
+          }
+
+          &:focus-within {
+            border-color: $headerborder;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          .searchdropdown {
+            display: block;
+          }
+        }
+      }
+
       &-link {
         @include square(30);
         @include border(solid, 1, transparent);
