@@ -6,6 +6,7 @@
   @include flex-center;
   @include w100;
   @include border-single(bottom, solid, 1, $headerborder);
+  height: size(64);
 
   &-nav {
     @include w100;
@@ -15,6 +16,143 @@
 
     @include breakpoint(tab992) {
       padding: size(0) size(32);
+    }
+
+    .channeldropdown {
+      @include flex-column;
+      gap: size(8);
+      position: relative;
+
+      @include breakpoint(tab992) {
+        display: none;
+      }
+
+      .dropdowninfo {
+        @include flex-center-vert;
+        padding: size(16) size(4);
+
+        .icon {
+          @include square(32);
+          @include circle;
+          @include flex-center;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+
+        .title {
+          @include flex-center-vert;
+
+          .titlebox {
+            .text {
+              font-size: size(8);
+            }
+          }
+
+          .icon {
+            @include square(24);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+      }
+
+      .dropdownitems {
+        position: absolute;
+        top: calc(100% + size(1));
+        left: 0;
+        background: $white;
+        box-shadow: $dropdownshadow;
+        width: size(200);
+        padding: size(12);
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        .dropdownlist {
+          @include list-vertical;
+          gap: size(6);
+
+          &-link {
+            @include flex-center-vert;
+            gap: size(12);
+            background: $white;
+            padding: size(6) size(12);
+
+            .icon {
+              @include square(24);
+              @include circle;
+              @include flex-center;
+              overflow: hidden;
+
+              img {
+                @include wh100;
+                object-fit: cover;
+              }
+            }
+
+            .text {
+              color: $textPrimary;
+              font-size: size(14);
+              font-weight: 500;
+            }
+
+            &:hover:not(.active) {
+              background: $gray-200;
+            }
+
+            &.active {
+              background: $primary;
+
+              .text {
+                color: $white;
+              }
+            }
+          }
+
+          .btn-create {
+            @include w100;
+            @include flex-center-vert;
+            gap: size(12);
+            background: $white;
+            padding: size(6) size(12);
+
+            .icon {
+              @include square(24);
+              @include circle;
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+
+            .text {
+              color: $textPrimary;
+              font-size: size(14);
+              font-weight: 500;
+            }
+
+            &:hover:not(.active) {
+              background: $gray-200;
+            }
+          }
+        }
+      }
+
+      @include hover {
+        .dropdownitems {
+          display: block;
+        }
+      }
     }
 
     .logo {
@@ -35,65 +173,11 @@
 
     .mobilemenu {
       @include list-horizontal;
-      width: calc(100% - size(150));
       justify-content: flex-end;
+      gap: size(8);
 
       @include breakpoint(tab992) {
         display: none;
-      }
-
-      &-item {
-        position: relative;
-        padding: size(12) size(4);
-
-        .userdropdown {
-          position: absolute;
-          top: calc(100% + size(1));
-          right: 0;
-          background: $white;
-          box-shadow: $dropdownshadow;
-          width: size(160);
-          padding: size(12);
-          display: none;
-          @extend %animation;
-          @extend %slideUpIn;
-
-          .userlist {
-            @include list-vertical;
-
-            &-link {
-              @include flex-center-vert;
-              gap: size(12);
-              padding: size(10);
-              background: $white;
-              @include transitionsbackground;
-
-              .icon {
-                @include square(16);
-                @include flex-center;
-
-                svg {
-                  @include wh100;
-                }
-              }
-
-              .text {
-                color: $textPrimary;
-                @include font($primaryFont, 12, normal, normal, 12);
-              }
-
-              @include hover {
-                background: $gray-200;
-              }
-            }
-          }
-        }
-
-        @include hover {
-          .userdropdown {
-            display: block;
-          }
-        }
       }
 
       &-link {

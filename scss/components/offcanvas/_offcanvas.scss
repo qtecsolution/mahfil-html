@@ -37,7 +37,7 @@
     padding: size(8) size(16);
 
     .logo {
-      width: size(190);
+      width: size(150);
       height: size(48);
       @include flex-center;
 
@@ -52,7 +52,7 @@
       @include transitionsall;
       padding: 0;
       margin: 0;
-      @include square(16);
+      @include square(14);
       @include flex-center;
       overflow: hidden;
 
@@ -98,8 +98,44 @@
           @include font($primaryFont, 12, normal, normal, 12);
         }
 
-        @include hover {
+        &:hover:not(.active) {
           background: $gray-200;
+        }
+
+        &.active {
+          background: $primary;
+
+          .icon {
+            svg {
+              rect {
+                fill: $white;
+              }
+            }
+          }
+
+          .text {
+            color: $white;
+          }
+        }
+
+        &.support.active {
+          .icon {
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+
+        &.settings.active {
+          .icon {
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
         }
       }
     }
