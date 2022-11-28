@@ -30,22 +30,20 @@
 
   &.offcanvas-start {
     border-right: 0;
-    @include w100;
-
-    @include breakpoint(mobile576) {
-      width: size(280);
-    }
+    width: size(280);
   }
 
   &-header {
+    padding: size(8) size(16);
+
     .logo {
       width: size(190);
       height: size(48);
-      padding: size(8);
       @include flex-center;
 
       img {
-        object-fit: contain;
+        @include w100;
+        object-fit: cover;
       }
     }
 
@@ -68,7 +66,7 @@
 
         svg {
           path {
-            // stroke: $danger;
+            fill: $danger;
           }
         }
       }
@@ -76,6 +74,36 @@
   }
 
   &-body {
+    .mobilelist {
+      @include list-vertical;
+
+      &-link {
+        @include flex-center-vert;
+        gap: size(12);
+        padding: size(10);
+        background: $white;
+        @include transitionsbackground;
+
+        .icon {
+          @include square(16);
+          @include flex-center;
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .text {
+          color: $textPrimary;
+          @include font($primaryFont, 12, normal, normal, 12);
+        }
+
+        @include hover {
+          background: $gray-200;
+        }
+      }
+    }
+
     &::-webkit-scrollbar {
       background: transparent;
       width: size(8);

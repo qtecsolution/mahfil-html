@@ -17,20 +17,6 @@
       padding: size(0) size(32);
     }
 
-    .hamburger {
-      width: size(24);
-
-      &-button {
-        @include w100;
-        height: size(18);
-        @include flex-center;
-
-        svg {
-          @include wh100;
-        }
-      }
-    }
-
     .logo {
       width: size(150);
       height: size(48);
@@ -42,6 +28,7 @@
       }
 
       img {
+        @include w100;
         object-fit: cover;
       }
     }
@@ -51,7 +38,7 @@
       width: calc(100% - size(150));
       justify-content: flex-end;
 
-      @include breakpoint(mobile768) {
+      @include breakpoint(tab992) {
         display: none;
       }
 
@@ -173,8 +160,116 @@
     .desktopmenu {
       display: none;
 
-      @include breakpoint(mobile768) {
+      @include breakpoint(tab992) {
         display: block;
+      }
+    }
+  }
+}
+
+.appmenu {
+  @include flex-center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  @include w100;
+  background: $white;
+  @include border-single(top, solid, 1, $headerborder);
+  padding: size(12);
+  z-index: 10000;
+
+  @include breakpoint(tab992) {
+    display: none;
+  }
+
+  .applist {
+    @include list-horizontal;
+    @include w100;
+    gap: size(12);
+
+    &-item {
+      width: calc(100% / 5);
+    }
+
+    &-link {
+      @include flex-center-column;
+      gap: size(8);
+      text-align: center;
+
+      .icon {
+        @include square(20);
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .text {
+        color: $gray-900;
+        font-size: size(12);
+        font-weight: 500;
+      }
+
+      &:hover:not(.active) {
+        .icon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+
+        .text {
+          color: $primary;
+        }
+      }
+
+      &.active {
+        .icon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+
+        .text {
+          color: $primary;
+        }
+      }
+    }
+
+    .hamburger-button {
+      @include flex-center-column;
+      gap: size(8);
+      text-align: center;
+
+      .icon {
+        @include square(20);
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .text {
+        color: $gray-900;
+        font-size: size(12);
+        font-weight: 500;
+      }
+
+      @include hover {
+        .icon {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+
+        .text {
+          color: $primary;
+        }
       }
     }
   }
