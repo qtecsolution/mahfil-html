@@ -188,7 +188,6 @@
           top: calc(100% + size(1));
           left: 0;
           background: $white;
-          box-shadow: $dropdownshadow;
           @include w100;
           display: none;
           @extend %animation;
@@ -197,8 +196,9 @@
 
         .searchbox {
           @include flex-center-vert;
-          @include border-single(bottom, solid, 1, $white);
+          @include border-single(bottom, solid, 1, $headerborder);
           @include transitionsall;
+          position: relative;
 
           .btn-search {
             width: size(48);
@@ -222,8 +222,46 @@
             }
           }
 
-          &:focus-within {
-            border-color: $headerborder;
+          .mobilesuggestion {
+            background: $white;
+            box-shadow: $dropdownshadow;
+            position: absolute;
+            top: calc(100% + size(1));
+            @extend %animation;
+            @extend %slideUpIn;
+            display: none;
+            @include w100;
+            padding: size(12);
+
+            &.active {
+              display: block;
+            }
+
+            .suggestionlist {
+              @include list-vertical;
+
+              &-item {
+                padding: size(8) size(12);
+                background: $white;
+                font-size: size(12);
+                font-weight: 400;
+                @include transitionsbackground;
+
+                @include hover {
+                  background: $gray-200;
+                }
+              }
+            }
+
+            // &::-webkit-scrollbar {
+            //   background: transparent;
+            //   width: length(8);
+            // }
+
+            // &::-webkit-scrollbar-thumb {
+            //   background: $gray-500;
+            //   @include radius(8);
+            // }
           }
         }
 
