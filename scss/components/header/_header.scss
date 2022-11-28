@@ -97,7 +97,7 @@
       }
 
       &-link {
-        @include square(28);
+        @include square(30);
         @include border(solid, 1, transparent);
         @include circle;
         @include flex-center;
