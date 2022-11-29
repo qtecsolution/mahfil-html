@@ -595,6 +595,7 @@
       @include flex-center-column;
       gap: size(8);
       text-align: center;
+      @include w100;
 
       .icon {
         @include square(20);

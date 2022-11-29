@@ -1,6 +1,31 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 .breadcrumb {
+  &-item {
+    color: $gray-600;
+    @include font($primaryFont, 12, medium, normal, 12);
+    padding: 0;
 
+    &.active {
+      color: $primary;
+    }
+
+    a {
+      color: inherit;
+      font: inherit;
+      @include transitionscolor;
+
+      @include hover {
+        color: $primary;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      display: none;
+    }
+  }
 }

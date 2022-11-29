@@ -1,0 +1,41 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.profile {
+  @include flex-column;
+  gap: size(32);
+
+  &-header {
+    .title {
+      color: $gray-700;
+      @include font($primaryFont, 20, bold, normal, 24);
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    background: $white;
+
+    .profilemenu {
+      background: $white;
+
+      .profilelist {
+        @include list-horizontal;
+        gap: size(8);
+
+        &-item {
+          // width: 50%;
+        }
+
+        &-link {
+          @include flex-center;
+          padding: size(14);
+
+          &.active {
+            background: $activebg;
+          }
+        }
+      }
+    }
+  }
+}
