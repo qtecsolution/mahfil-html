@@ -3,7 +3,6 @@
 
 .authentication {
   padding: size(48) size(4);
-  min-height: 100vh;
 
   @include breakpoint(tab992) {
     padding: size(64) size(4);
@@ -12,19 +11,24 @@
 
 .authenticationform {
   @include flex-column;
-  gap: size(40);
+  gap: size(24);
   background: $white;
   @include radius(16);
   padding: size(32) size(16);
 
   @include breakpoint(tab992) {
     padding: size(48) size(32);
+    gap: size(40);
   }
 
   &-header {
     @include flex-center-column;
-    gap: size(24);
+    gap: size(8);
     text-align: center;
+
+    @include breakpoint(tab992) {
+      gap: size(24);
+    }
 
     .logo {
       width: size(190);
@@ -55,11 +59,11 @@
 
   &-body {
     @include flex-column;
-    gap: size(24);
-    margin-bottom: size(24);
+    gap: size(16);
 
     @include breakpoint(tab992) {
       margin-bottom: size(40);
+      gap: size(24);
     }
 
     .info {

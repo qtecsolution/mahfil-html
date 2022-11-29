@@ -103,7 +103,7 @@ video {
   margin: 0;
 
   &::selection {
-    // @include setBgColor($btnbg, $headingText);
+    @include setBgColor($primary-dark, $white);
   }
 }
 
@@ -129,7 +129,7 @@ h6 {
   margin: 0;
 
   &::selection {
-    // @include setBgColor($btnbg, $headingText);
+    @include setBgColor($primary-dark, $white);
   }
 }
 
