@@ -4,9 +4,233 @@
 .main {
   @include flex;
   gap: size(32);
+  height: calc(100vh - size(64));
 
   .sidebar {
     width: size(270);
+    padding: size(30) size(0);
+    background: $white;
+    display: none;
+
+    @include breakpoint(tab992) {
+      @include flex-column;
+      gap: size(40);
+    }
+
+    &-header {
+      .accordion {
+        @include radius(0);
+
+        &-item {
+          @include radius(0);
+          border: none;
+
+          &:first-of-type {
+            .accordion-collapse {
+              @include radius(0);
+            }
+          }
+
+          &:last-of-type {
+            .accordion-collapse {
+              @include radius(0);
+            }
+          }
+        }
+
+        &-button {
+          @include flex-center-column;
+          gap: size(20);
+
+          .user-thumbnail {
+            @include square(100);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+              @include wh100;
+              object-fit: cover;
+            }
+          }
+
+          .usertitle {
+            @include flex-center;
+
+            .title {
+              color: $usercolor;
+              @include font($primaryFont, 14, medium, normal, 14);
+            }
+
+            .icon {
+              @include square(24);
+              @include flex-center;
+              overflow: hidden;
+              @include transitiontransform;
+            }
+          }
+
+          &::after {
+            width: 0;
+            height: 0;
+            display: none;
+          }
+
+          &:not(.collapsed) {
+            box-shadow: none;
+            @include setBgColor($white, $usercolor);
+
+            .usertitle {
+              .icon {
+                @include rotate(180);
+              }
+            }
+          }
+        }
+
+        &-body {
+          margin-inline: auto;
+          width: size(210);
+          box-shadow: $dropdownshadow;
+          padding: size(12);
+
+          .droplist {
+            @include list-vertical;
+            gap: size(6);
+
+            &-link {
+              @include flex-center-vert;
+              gap: size(12);
+              padding: size(6) size(12);
+              background: $white;
+              @include w100;
+              @include transitionsbackground;
+
+              .icon {
+                @include square(24);
+                @include circle;
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                  @include wh100;
+                  object-fit: cover;
+                }
+              }
+
+              .text {
+                color: $textPrimary;
+                @include font($primaryFont, 14, medium, normal, 14);
+              }
+
+              &:hover:not(.active) {
+                background: $gray-200;
+              }
+
+              &.active {
+                background: $primary;
+
+                .text {
+                  color: $white;
+                }
+              }
+            }
+
+            .btn-create {
+              @include flex-center-vert;
+              gap: size(12);
+              padding: size(6) size(12);
+              background: $white;
+              @include w100;
+              @include transitionsbackground;
+
+              .icon {
+                @include square(24);
+                @include circle;
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                  @include wh100;
+                  object-fit: cover;
+                }
+              }
+
+              .text {
+                color: $textPrimary;
+                @include font($primaryFont, 14, medium, normal, 14);
+              }
+
+              &:hover:not(.active) {
+                background: $gray-200;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      padding-bottom: size(20);
+      @include border-single(bottom, solid, 1, $gray-50);
+      @include flex-center;
+
+      .sidelist {
+        @include list-vertical;
+        gap: size(8);
+        width: size(215);
+
+        &-link {
+          @include flex-center-vert;
+          gap: size(14);
+          padding: size(10);
+          background: $white;
+
+          .icon {
+            @include square(20);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          .text {
+            color: $gray-900;
+            @include font($primaryFont, 14, medium, normal, 14);
+          }
+
+          &:hover:not(.active) {
+            background: $primary;
+
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+
+            .text {
+              color: $white;
+            }
+          }
+
+          &.active {
+            background: $primary;
+
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+
+            .text {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
   }
 
   .main-section {

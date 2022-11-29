@@ -346,7 +346,6 @@
       .desktopsearch {
         @include breakpoint(desktop1400) {
           width: 50%;
-          @include flex-end;
         }
 
         .searchbox {
