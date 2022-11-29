@@ -16,6 +16,16 @@
 
     @include breakpoint(tab992) {
       padding: size(0) size(32);
+      gap: size(32);
+      justify-content: flex-start;
+    }
+
+    @include breakpoint(desktop1024) {
+      gap: size(48);
+    }
+
+    @include breakpoint(desktop1200) {
+      gap: size(80);
     }
 
     .channeldropdown {
@@ -243,6 +253,7 @@
               &-item {
                 padding: size(8) size(12);
                 background: $white;
+                cursor: pointer;
                 font-size: size(12);
                 font-weight: 400;
                 @include transitionsbackground;
@@ -252,16 +263,6 @@
                 }
               }
             }
-
-            // &::-webkit-scrollbar {
-            //   background: transparent;
-            //   width: length(8);
-            // }
-
-            // &::-webkit-scrollbar-thumb {
-            //   background: $gray-500;
-            //   @include radius(8);
-            // }
           }
         }
 
@@ -338,7 +339,182 @@
       display: none;
 
       @include breakpoint(tab992) {
-        display: block;
+        @include flex-center-between;
+        flex-grow: 1;
+      }
+
+      .desktopsearch {
+        @include breakpoint(desktop1400) {
+          width: 50%;
+          @include flex-end;
+        }
+
+        .searchbox {
+          @include border(solid, 1, $searchborder);
+          @include flex-center-vert;
+          height: size(40);
+          position: relative;
+          width: size(300);
+          @include transitionsall;
+
+          @include breakpoint(desktop1024) {
+            width: size(368);
+          }
+
+          @include breakpoint(desktop1400) {
+            width: size(450);
+          }
+
+          &:focus-within {
+            border-color: $gray-600;
+          }
+
+          .btn-search {
+            width: size(36);
+            height: size(40);
+            @include flex-center;
+          }
+
+          .searchfield {
+            @include setBgColor(transparent, $gray-900);
+            @include font($primaryFont, 12, normal, normal, 12);
+            width: calc(100% - size(36));
+            height: size(40);
+            padding-right: size(12);
+
+            @include breakpoint(desktop1200) {
+              font-size: size(14);
+            }
+
+            &::placeholder {
+              color: $gray-500;
+            }
+          }
+
+          .desktopsuggestion {
+            background: $white;
+            box-shadow: $dropdownshadow;
+            position: absolute;
+            top: calc(100% + size(1));
+            @extend %animation;
+            @extend %slideUpIn;
+            display: none;
+            @include w100;
+            padding: size(12);
+            max-height: size(300);
+            overflow: hidden;
+            overflow-y: scroll;
+
+            &.active {
+              display: block;
+            }
+
+            .suggestionlist {
+              @include list-vertical;
+
+              &-item {
+                padding: size(10) size(12);
+                background: $white;
+                font-size: size(12);
+                font-weight: 400;
+                cursor: pointer;
+                @include transitionsbackground;
+
+                @include hover {
+                  background: $gray-200;
+                }
+              }
+            }
+
+            &::-webkit-scrollbar {
+              background: transparent;
+              width: size(8);
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background: $gray-300;
+              @include radius(8);
+            }
+          }
+        }
+      }
+
+      .desknav {
+        @include flex-end;
+
+        .liveuplist {
+          @include flex-center-vert;
+          gap: size(10);
+        }
+
+        .userinfo {
+          cursor: pointer;
+          position: relative;
+          padding: size(12);
+
+          .btn-user {
+            @include square(40);
+            @include circle;
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+              @include wh100;
+              object-fit: cover;
+            }
+          }
+
+          .userdropdown {
+            position: absolute;
+            right: 0;
+            top: calc(100% + size(1));
+            background: $white;
+            box-shadow: $dropdownshadow;
+            padding: size(12);
+            display: none;
+            @extend %animation;
+            @extend %slideUpIn;
+
+            .userlist {
+              @include list-vertical;
+              gap: size(6);
+              width: size(210);
+
+              &-link {
+                background: $white;
+                @include flex-center-vert;
+                gap: size(12);
+                @include transitionsbackground;
+                padding: size(10);
+
+                .icon {
+                  @include square(16);
+                  @include flex-center;
+                  overflow: hidden;
+
+                  svg {
+                    @include wh100;
+                  }
+                }
+
+                .text {
+                  color: $textPrimary;
+                  @include font($primaryFont, 14, normal, normal, 14);
+                }
+
+                @include hover {
+                  background: $gray-200;
+                }
+              }
+            }
+          }
+
+          @include hover {
+            .userdropdown {
+              display: block;
+            }
+          }
+        }
       }
     }
   }

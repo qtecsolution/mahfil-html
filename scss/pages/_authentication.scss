@@ -62,7 +62,6 @@
     gap: size(16);
 
     @include breakpoint(tab992) {
-      margin-bottom: size(40);
       gap: size(24);
     }
 
@@ -114,10 +113,6 @@
   &-footer {
     @include flex-center-column;
     gap: size(24);
-
-    .submit {
-      width: size(185);
-    }
 
     .authentictext {
       @include flex-center;

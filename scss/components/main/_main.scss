@@ -1,0 +1,15 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.main {
+  @include flex;
+  gap: size(32);
+
+  .sidebar {
+    width: size(270);
+  }
+
+  .main-section {
+    width: calc(100% - size(32));
+  }
+}

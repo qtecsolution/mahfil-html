@@ -205,6 +205,7 @@
                     type="search"
                     id="mobilesearch-field"
                     class="searchfield"
+                    autocomplete="off"
                     placeholder="What are you looking for?"
                   />
                 </div>
@@ -289,7 +290,222 @@
         <!-- MOBILE-MENU END -->
 
         <!-- DESKTOP-MENU START -->
-        <ul class="desktopmenu"></ul>
+        <div class="desktopmenu">
+          <div class="desktopsearch">
+            <div class="searchbox">
+              <button type="button" class="btn-search">
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#desksearchicon)">
+                    <path
+                      d="M13.5461 11.6667H12.8877L12.6544 11.4417C13.4711 10.4917 13.9627 9.25833 13.9627 7.91667C13.9627 4.925 11.5377 2.5 8.54606 2.5C5.55439 2.5 3.12939 4.925 3.12939 7.91667C3.12939 10.9083 5.55439 13.3333 8.54606 13.3333C9.88773 13.3333 11.1211 12.8417 12.0711 12.025L12.2961 12.2583V12.9167L16.4627 17.075L17.7044 15.8333L13.5461 11.6667ZM8.54606 11.6667C6.47106 11.6667 4.79606 9.99167 4.79606 7.91667C4.79606 5.84167 6.47106 4.16667 8.54606 4.16667C10.6211 4.16667 12.2961 5.84167 12.2961 7.91667C12.2961 9.99167 10.6211 11.6667 8.54606 11.6667Z"
+                      fill="#C2CFE0"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="desksearchicon">
+                      <rect
+                        width="20"
+                        height="20"
+                        fill="white"
+                        transform="translate(0.629395)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <input
+                type="search"
+                id="desktopsearch-field"
+                class="searchfield"
+                placeholder="Global search..."
+                autocomplete="off"
+              />
+
+              <div class="desktopsuggestion">
+                <ul class="suggestionlist">
+                  <li class="suggestionlist-item">Search Item One</li>
+                  <li class="suggestionlist-item">Search Item Two</li>
+                  <li class="suggestionlist-item">Search Item Three</li>
+                  <li class="suggestionlist-item">Search Item Four</li>
+                  <li class="suggestionlist-item">Search Item Five</li>
+                  <li class="suggestionlist-item">Search Item Six</li>
+                  <li class="suggestionlist-item">Search Item Seven</li>
+                  <li class="suggestionlist-item">Search Item Eight</li>
+                  <li class="suggestionlist-item">Search Item Nine</li>
+                  <li class="suggestionlist-item">Search Item Ten</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="desknav">
+            <div class="liveuplist">
+              <button type="button" class="btn-live">
+                <span class="icon">
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask id="deskliveicon" x="0" y="0" width="25" height="24">
+                      <rect
+                        x="0.502441"
+                        width="24"
+                        height="24"
+                        fill="#D9D9D9"
+                      />
+                    </mask>
+                    <g mask="url(#deskliveicon)">
+                      <path
+                        d="M1.50244 12C1.50244 10.4667 1.79011 9.03333 2.36544 7.7C2.94011 6.36667 3.72744 5.204 4.72744 4.212C5.72744 3.22067 6.89411 2.43733 8.22744 1.862C9.56077 1.28733 10.9858 1 12.5024 1C14.0191 1 15.4441 1.28733 16.7774 1.862C18.1108 2.43733 19.2774 3.22067 20.2774 4.212C21.2774 5.204 22.0651 6.36667 22.6404 7.7C23.2151 9.03333 23.5024 10.4667 23.5024 12H21.5024C21.5024 10.75 21.2651 9.579 20.7904 8.487C20.3151 7.39567 19.6691 6.44167 18.8524 5.625C18.0358 4.80833 17.0818 4.16667 15.9904 3.7C14.8984 3.23333 13.7358 3 12.5024 3C11.2691 3 10.1064 3.23333 9.01444 3.7C7.92311 4.16667 6.96911 4.80833 6.15244 5.625C5.33577 6.44167 4.68977 7.39567 4.21444 8.487C3.73977 9.579 3.50244 10.75 3.50244 12H1.50244ZM5.50244 12C5.50244 10.0333 6.18577 8.375 7.55244 7.025C8.91911 5.675 10.5691 5 12.5024 5C14.4358 5 16.0858 5.675 17.4524 7.025C18.8191 8.375 19.5024 10.0333 19.5024 12H17.5024C17.5024 10.6167 17.0151 9.43733 16.0404 8.462C15.0651 7.48733 13.8858 7 12.5024 7C11.1191 7 9.94011 7.48733 8.96544 8.462C7.99011 9.43733 7.50244 10.6167 7.50244 12H5.50244ZM9.50244 22.4L8.10244 21L11.5024 17.6V14.3C11.0524 14.1 10.6901 13.7917 10.4154 13.375C10.1401 12.9583 10.0024 12.5 10.0024 12C10.0024 11.3 10.2441 10.7083 10.7274 10.225C11.2108 9.74167 11.8024 9.5 12.5024 9.5C13.2024 9.5 13.7941 9.74167 14.2774 10.225C14.7608 10.7083 15.0024 11.3 15.0024 12C15.0024 12.5 14.8651 12.9583 14.5904 13.375C14.3151 13.7917 13.9524 14.1 13.5024 14.3V17.6L16.9024 21L15.5024 22.4L12.5024 19.4L9.50244 22.4Z"
+                        fill="#BD081C"
+                      />
+                    </g>
+                  </svg>
+                </span>
+                <span class="text">Go Live</span>
+              </button>
+
+              <button type="button" class="btn-upload">
+                <span class="icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <mask
+                      id="deskuploadicon"
+                      x="0"
+                      y="0"
+                      width="25"
+                      height="24"
+                    >
+                      <rect
+                        x="0.000488281"
+                        width="24"
+                        height="24"
+                        fill="#D9D9D9"
+                      />
+                    </mask>
+                    <g mask="url(#deskuploadicon)">
+                      <path
+                        d="M6.00049 20C5.45049 20 4.97982 19.8043 4.58849 19.413C4.19649 19.021 4.00049 18.55 4.00049 18V15H6.00049V18H18.0005V15H20.0005V18C20.0005 18.55 19.8048 19.021 19.4135 19.413C19.0215 19.8043 18.5505 20 18.0005 20H6.00049ZM11.0005 16V7.85L8.40049 10.45L7.00049 9L12.0005 4L17.0005 9L15.6005 10.45L13.0005 7.85V16H11.0005Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </span>
+                <span class="text">Upload Video</span>
+              </button>
+            </div>
+
+            <div class="userinfo">
+              <button type="button" class="btn-user">
+                <img src="assets/images/avatar/avatar.png" alt="user-avatar" />
+              </button>
+
+              <div class="userdropdown">
+                <ul class="userlist">
+                  <li class="userlist-item">
+                    <a href="authentication/profile.html" class="userlist-link">
+                      <span class="icon">
+                        <svg
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <mask
+                            id="myprofileicon"
+                            style="mask-type: alpha"
+                            maskUnits="userSpaceOnUse"
+                            x="0"
+                            y="0"
+                            width="17"
+                            height="16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M10.3809 5C10.3809 6.10457 9.48543 7 8.38086 7C7.27629 7 6.38086 6.10457 6.38086 5C6.38086 3.89543 7.27629 3 8.38086 3C9.48543 3 10.3809 3.89543 10.3809 5ZM8.38086 8C10.0377 8 11.3809 6.65685 11.3809 5C11.3809 3.34315 10.0377 2 8.38086 2C6.72401 2 5.38086 3.34315 5.38086 5C5.38086 6.65685 6.72401 8 8.38086 8ZM14.3809 13C14.3809 14 13.3809 14 13.3809 14H3.38086C3.38086 14 2.38086 14 2.38086 13C2.38086 12 3.38086 9 8.38086 9C13.3809 9 14.3809 12 14.3809 13ZM13.3808 12.9965C13.3794 12.7497 13.2271 12.0104 12.5487 11.3321C11.8965 10.6798 10.67 10 8.38085 10C6.09174 10 4.86521 10.6798 4.21296 11.3321C3.53461 12.0104 3.38228 12.7497 3.38086 12.9965H13.3808Z"
+                              fill="black"
+                            />
+                          </mask>
+                          <g mask="url(#myprofileicon)">
+                            <rect
+                              x="0.380859"
+                              width="16"
+                              height="16"
+                              fill="#425466"
+                            />
+                          </g>
+                        </svg>
+                      </span>
+                      <span class="text">My Account</span>
+                    </a>
+                  </li>
+
+                  <li class="userlist-item">
+                    <a href="authentication/login.html" class="userlist-link">
+                      <span class="icon">
+                        <svg
+                          width="17"
+                          height="16"
+                          viewBox="0 0 17 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <mask
+                            id="desklogicon"
+                            style="mask-type: alpha"
+                            maskUnits="userSpaceOnUse"
+                            x="0"
+                            y="0"
+                            width="17"
+                            height="16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M6.38086 12.5C6.38086 12.7761 6.60472 13 6.88086 13L14.8809 13C15.157 13 15.3809 12.7761 15.3809 12.5L15.3809 3.5C15.3809 3.22386 15.157 3 14.8809 3L6.88086 3C6.60472 3 6.38086 3.22386 6.38086 3.5L6.38086 5.5C6.38086 5.77614 6.157 6 5.88086 6C5.60472 6 5.38086 5.77614 5.38086 5.5L5.38086 3.5C5.38086 2.67157 6.05243 2 6.88086 2L14.8809 2C15.7093 2 16.3809 2.67157 16.3809 3.5L16.3809 12.5C16.3809 13.3284 15.7093 14 14.8809 14L6.88086 14C6.05243 14 5.38086 13.3284 5.38086 12.5L5.38086 10.5C5.38086 10.2239 5.60472 10 5.88086 10C6.157 10 6.38086 10.2239 6.38086 10.5L6.38086 12.5Z"
+                              fill="black"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.527306 8.35355C0.332044 8.15829 0.332044 7.84171 0.527306 7.64645L3.52731 4.64645C3.72257 4.45118 4.03915 4.45118 4.23441 4.64645C4.42967 4.84171 4.42967 5.15829 4.23441 5.35355L2.08797 7.5L10.8809 7.5C11.157 7.5 11.3809 7.72386 11.3809 8C11.3809 8.27614 11.157 8.5 10.8809 8.5L2.08797 8.5L4.23441 10.6464C4.42967 10.8417 4.42967 11.1583 4.23441 11.3536C4.03915 11.5488 3.72257 11.5488 3.52731 11.3536L0.527306 8.35355Z"
+                              fill="black"
+                            />
+                          </mask>
+                          <g mask="url(#desklogicon)">
+                            <rect
+                              x="0.380859"
+                              width="16"
+                              height="16"
+                              fill="#425466"
+                            />
+                          </g>
+                        </svg>
+                      </span>
+                      <span class="text">Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- DESKTOP-MENU END -->
       </nav>
     </header>
@@ -633,6 +849,92 @@
     </div>
     <!-- APP MENU END -->
 
+    <!-- MAIN SECTION START -->
+    <main class="main">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="accordion" id="accordionDropdown">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingDropdown">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseDropdown"
+                  aria-expanded="false"
+                  aria-controls="collapseDropdown"
+                >
+                  <figure class="user-thumbnail">
+                    <img
+                      src="assets/images/user/user.png"
+                      alt="user-thumbnail"
+                    />
+                  </figure>
+
+                  <span class="usertitle">
+                    <span class="title">Mega Bangla Tv</span>
+                    <span class="icon">
+                      <svg
+                        width="25"
+                        height="24"
+                        viewBox="0 0 25 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <mask
+                          id="deskdropiocn"
+                          style="mask-type: alpha"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="25"
+                          height="24"
+                        >
+                          <rect
+                            x="0.3479"
+                            width="24"
+                            height="24"
+                            fill="#D9D9D9"
+                          />
+                        </mask>
+                        <g mask="url(#deskdropiocn)">
+                          <path
+                            d="M12.3479 15.375L6.3479 9.37498L7.7479 7.97498L12.3479 12.575L16.9479 7.97498L18.3479 9.37498L12.3479 15.375Z"
+                            fill="#4B4B4C"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseDropdown"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingDropdown"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It
+                  is hidden by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-body"></div>
+      </aside>
+      <section class="main-section"></section>
+    </main>
+    <!-- MAIN SECTION END -->
+
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- TOOLTIP JS -->
@@ -640,5 +942,6 @@
 
     <!-- SEARCH-SUGGESTIONS -->
     <script src="assets/js/search-suggestion/mobsuggestion.js"></script>
+    <script src="assets/js/search-suggestion/desksuggestion.js"></script>
   </body>
 </html>

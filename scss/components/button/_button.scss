@@ -18,10 +18,65 @@ button,
   }
 }
 
+.btn-live,
+.btn-upload {
+  width: size(150);
+  @include flex-center;
+  gap: size(10);
+  @include border(solid, 1, transparent);
+  padding: size(8);
+
+  .icon {
+    @include square(24);
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .text {
+    @include font($primaryFont, 14, medium, normal, 14);
+  }
+}
+
 .btn-live {
+  border-color: $gray-400;
+  background: $white;
+
+  .text {
+    color: $gray-700;
+  }
+
+  @include hover {
+    background: $danger;
+    border-color: $danger;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    .text {
+      color: $white;
+    }
+  }
 }
 
 .btn-upload {
+  border-color: $primary;
+  background: $primary;
+
+  .text {
+    color: $white;
+  }
+
+  @include hover {
+    background: $primary-dark;
+    border-color: $primary-dark;
+  }
 }
 
 .btn-submit {
