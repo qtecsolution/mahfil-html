@@ -4,13 +4,17 @@
 .main {
   @include flex;
   gap: size(32);
-  height: calc(100vh - size(64));
+  min-height: calc(100vh - size(64));
 
   .sidebar {
     width: size(270);
+    @include h100;
     padding: size(30) size(0);
     background: $white;
     display: none;
+    position: fixed;
+    top: size(64);
+    left: 0;
 
     @include breakpoint(tab992) {
       @include flex-column;
@@ -234,6 +238,12 @@
   }
 
   .main-section {
-    width: calc(100% - size(32));
+    position: relative;
+    @include wh100;
+
+    @include breakpoint(tab992) {
+      width: calc(100% - size(32));
+      left: size(270);
+    }
   }
 }

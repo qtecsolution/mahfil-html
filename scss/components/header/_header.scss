@@ -2,7 +2,7 @@
 @use "../../partials" as *;
 
 .header {
-  background: $white;
+  background: $headerbg;
   @include flex-center;
   @include w100;
   @include border-single(bottom, solid, 1, $headerborder);
@@ -344,9 +344,9 @@
       }
 
       .desktopsearch {
-        @include breakpoint(desktop1400) {
-          width: 50%;
-        }
+        // @include breakpoint(desktop1400) {
+        //   width: 50%;
+        // }
 
         .searchbox {
           @include border(solid, 1, $searchborder);
@@ -525,7 +525,7 @@
   bottom: 0;
   left: 0;
   @include w100;
-  background: $white;
+  background: $headerbg;
   @include border-single(top, solid, 1, $headerborder);
   padding: size(12);
   z-index: 10000;
