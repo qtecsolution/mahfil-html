@@ -2,9 +2,12 @@
 @use "../../partials" as *;
 
 .main {
-  @include flex;
-  gap: size(32);
   min-height: calc(100vh - size(64));
+
+  @include breakpoint(tab992) {
+    @include flex;
+    gap: size(32);
+  }
 
   .sidebar {
     width: size(270);
@@ -240,12 +243,12 @@
 
   .main-section {
     position: relative;
-    @include wh100;
+    @include h100;
     padding: size(30) size(16) size(48);
 
     @include breakpoint(tab992) {
-      width: calc(100% - size(32));
-      left: size(270);
+      width: calc(100% - size(270));
+      margin-left: auto;
       padding: size(32) size(32) size(80);
     }
   }
