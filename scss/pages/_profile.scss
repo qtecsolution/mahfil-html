@@ -30,10 +30,10 @@
 
       .myprofilelist {
         @include list-horizontal;
-        gap: size(8);
 
         @include breakpoint(tab992) {
           flex-direction: column;
+          gap: size(8);
           @include border-single(right, solid, 1, $gray-300);
           @include h100;
           min-height: size(615);
