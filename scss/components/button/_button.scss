@@ -92,3 +92,21 @@ button,
     background: $primary-dark;
   }
 }
+
+
+.keywordbtn {
+  @include setBgColor($gray-200,$gray-600);
+  padding: size(8) size(20);
+  @include radius(40);
+  @include flex-center-between;
+  // min-width: size(120);
+  gap: size(14);
+
+  &-icon {
+    @include border(solid,1,$gray-300);
+    @include square(24);
+    @include flex-center;
+    overflow: hidden;
+    @include circle;
+  }
+}
