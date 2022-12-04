@@ -1,0 +1,71 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.analytic-tab {
+
+    .nav {
+        &.nav-tabs {
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            border-bottom: none;
+            .nav-item {
+              border-radius: 0;
+            }
+            .nav-link  {
+                border: none;
+                border-top: size(4) solid transparent;
+                @include radius(0);
+                &.tabbtn {
+                    padding: size(12);
+                    @include flex-between;
+                    gap: size(20);
+                    @include breakpoint(tab992) {
+                        padding: size(16);
+                        padding: size(20);
+                        gap: size(24);
+
+                    }
+                    .tab-text {
+                        @include flex-column;
+                        align-items: flex-start;
+                        gap: size(4);
+                        
+                        .tabbtn-title {
+                            color: $gray-600;
+                            @include font($primaryFont,14,normal,normal,20);
+                        }
+                        .tabbtn-count {
+                            color: $gray-800;
+                            @include font($primaryFont,18,bold,normal,26);
+                            @include breakpoint(mobile768) {
+                            @include font($primaryFont,20,bold,normal,26);
+
+                            }
+                        }
+                    }
+                    .icon {
+
+                    }
+                }
+                &:hover {
+                    border-color: transparent;
+                }
+                &.active {
+                   border-top: size(4) solid $primary;
+                }
+            }
+        }
+    }
+
+    .tabs-view {
+        padding: size(50) size(20);
+        background: $white;
+       
+        .graph-thumb {
+            img {
+                object-fit: contain;
+                max-width: 100%;
+            }
+        }
+    }
+}

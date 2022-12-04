@@ -1,5 +1,33 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+.inputbox {
+    @include flex-column;
+    gap: size(8);
 
+    .inputlabel {
+      color: $textPrimary;
+      @include font($primaryFont, 14, medium, normal, 17);
+    }
+
+    .inputfield ,.textareafield{
+      @include setBgColor($white, $gray-900);
+      @include border(solid, 1, $gray-300);
+      @include radius(6);
+      @include font($primaryFont, 14, medium, normal, 17);
+      padding: size(13.5) size(16);
+      @include transitionsall;
+
+      &::placeholder {
+        color: $textPlaceholder;
+      }
+
+      &:focus {
+        border-color: $primary;
+      }
+    }
+    .textareafield {
+        height: size(400);
+    }
+  }
 
 

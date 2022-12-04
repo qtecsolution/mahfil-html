@@ -1,0 +1,94 @@
+
+@use "../global" as *;
+@use "../partials" as *;
+.videodetail-page {
+    @include flex-column;
+    gap: size(40);
+    .videodetail {
+        @include flex-column;
+        gap: size(24);
+        &-header {
+          .breadcrumb-between {
+            @include flex-center-between;
+          }
+          .title {
+            color: $gray-700;
+            @include font($primaryFont, 20, bold, normal, 24);
+          }
+        }
+    
+        &-body {
+            .linkthumbnail {
+                background: $white;
+                padding: size(18);
+                @include flex;
+                flex-wrap: wrap;
+                gap: size(20);
+                .thumbnail {
+                    figure {
+                        height: size(158);
+                        width: size(294);
+                        overflow: hidden;
+                        img {
+                            @include wh100;
+                            object-fit: cover;
+                        }
+                    }
+                } 
+                .link-copy {
+                    @include flex-column;
+                    align-items: flex-start;
+                    gap: size(16);
+                    .link-text {
+                        @include flex;
+                        gap: size(26);
+                        .text {
+                            color: $gray-700;
+                            @include font($primaryFont,16,medium,normal,24);
+                            @include breakpoint(mobile768) {
+                            @include font($primaryFont,18,medium,normal,24);
+    
+                            }
+                        }
+                        .icon {
+                            cursor: pointer;
+                        }
+                    }
+                    select {
+                      @include border(solid,1,$gray-400);
+                      padding: size(8) size(12);
+                    }
+                }
+            }
+        }
+    }
+    .videoanalytics {
+        @include flex-column;
+        gap: size(40);
+        &-header {
+            @include flex-center-between;
+            
+            .title {
+                color: $gray-800;
+                @include font($primaryFont, 20, bold, normal, 24);
+              }
+        }
+        &-body {
+            
+        }
+    }
+
+    .thumbdes {
+        
+        .left-content {
+            background: $white;
+            padding: size(20);
+        }
+        .right-content {
+            background: $white;
+            padding: size(20);
+            height: 100%;
+        }
+    }
+    
+}

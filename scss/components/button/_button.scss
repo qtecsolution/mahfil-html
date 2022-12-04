@@ -110,3 +110,23 @@ button,
     @include circle;
   }
 }
+
+.breadcumb-btn {
+  @include font($primaryFont, 14, normal, normal, 18);
+  display: inline-block;
+  @include border(solid,1,$gray-400);
+  padding: size(8) size(16);
+  text-align: center;
+  @include transitionsbackground;
+  width: size(120);
+  color: $gray-700;
+  @include hover {
+    background: $gray-400;
+  }
+}
+
+.tabbtn {
+  .tab-text {
+    
+  }
+}
