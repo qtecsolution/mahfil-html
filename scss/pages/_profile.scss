@@ -5,6 +5,7 @@
   @include flex-column;
   gap: size(32);
 
+
   &-header {
     .title {
       color: $gray-700;
@@ -141,7 +142,6 @@
 
       &-body {
         @include flex-center;
-
         .profileform {
           @include flex-column;
           gap: size(16);
@@ -369,6 +369,7 @@
 
         }
       }
+  
 
 
       .changepassword {
@@ -424,6 +425,107 @@
               }
             }
           }
+        }
+      }
+    }
+
+        
+    // support page 
+
+      .form-wrapper {
+        padding: size(20);
+        @include breakpoint(mobile414) {
+          padding: size(30);
+        }
+        @include breakpoint(mobile480) {
+          padding: size(36);
+        }
+        @include breakpoint(mobile576) {
+          padding: size(40);
+        }
+        @include breakpoint(mobile768) {
+          padding: size(48);
+        }
+        @include breakpoint(tab992) {
+          padding: size(60);
+        }
+
+      }
+    .supportform{
+      @include w100;
+      @include flex-column;
+      gap: size(16);
+  
+  
+      @include breakpoint(mobile768) {
+        width: size(444);
+      } 
+
+     
+
+     
+
+      &-header {
+        @include flex-column;
+        gap: size(16); 
+        
+        .inputbox {
+          @include flex-column;
+          gap: size(8);
+
+          .inputlabel {
+            color: $gray-600;
+            @include font($primaryFont, 14, medium, normal, 17);
+          }
+
+          .inputfield , .textareafield {
+            @include setBgColor($white, $gray-900);
+            @include border(solid, 1, $gray-300);
+            
+            @include font($primaryFont, 14, medium, normal, 17);
+            padding: size(13.5) size(16);
+            @include transitionsall;
+           
+
+            &::placeholder {
+              color: $textPlaceholder;
+            }
+
+            &:focus {
+              border-color: $primary;
+            }
+          }
+          .textareafield {
+            height: size(218);
+          }
+        }
+        .btn-wrapper {
+          width: size(180);
+          padding-inline: 0;
+          margin: auto;
+          @include breakpoint(mobile576) {
+            margin-left: auto;
+            margin-right: 0;
+          }
+          padding-top: size(14);
+          .btn-submit {
+            font-size: size(14);
+          }
+        }
+        
+      }
+      &-footer {
+        @include flex-center;
+        flex-direction: column;
+        gap: size(16);
+        @include font($primaryFont,16,normal,normal,14);
+        color: $gray-700;
+        @include breakpoint(mobile768) {
+          gap: size(24);
+        }
+        a {
+          color: $primary;
+          @include font($primaryFont,14,bold,normal,14);
         }
       }
     }
