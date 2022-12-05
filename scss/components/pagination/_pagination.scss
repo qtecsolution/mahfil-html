@@ -1,0 +1,34 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+
+.pagination-wrapper {
+    @include flex-end;
+    .paginationlist {
+        @include list-horizontal;
+        gap: size(2);
+        &-item {
+    
+        }
+        &-link {
+            @include square(30);
+            display: inline-block;
+         
+            @include flex-center;
+            gap: size(2);
+            @include setBgColor($white,$gray-600);
+            .round {
+                @include square(4);
+    
+                background-color:$gray-300;
+                display: inline-block;
+                @include circle;
+                
+            }
+
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+}

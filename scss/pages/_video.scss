@@ -1,0 +1,42 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.videos {
+    &-content {
+        @include flex-column;
+        gap: size(8);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: size(24);
+       
+        .header-title {
+            color: $gray-800;
+            @include font($primaryFont, 18, bold, normal, 18);
+            @include breakpoint(tab992) {
+            @include font($primaryFont, 20, bold, normal, 18);
+
+            }
+        }
+        .selected-videos {
+            @include flex-center-between;
+            background: $white;
+            padding: size(26) size(12);
+            @include breakpoint(tab992) {
+            padding-right: size(50);
+            }
+            .buttons {
+                @include flex-column;
+                gap: size(8);
+                @include breakpoint(mobile414) {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+
+    &-body {
+
+    }
+}

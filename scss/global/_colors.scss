@@ -50,3 +50,8 @@ $shadow-3: rgba(0, 0, 0, 0.07);
 $dropdownshadow: 0 0 0.0625rem $shadow-1, 0 1.875rem 2.5rem $shadow-2;
 $inputshowdow: drop-shadow(0 0.1875rem 0.25rem $shadow-3);
 $videoshadow: inset 0 -0.0625rem 0 $gray-200;
+
+
+// CHECKBOX COLOR
+$checkboxbg:hsl(228, 100%, 65%); //#4C6FFF
+$checkboxborder:hsl(251, 45%, 79%) //#BCB3E2

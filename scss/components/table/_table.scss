@@ -17,7 +17,7 @@ table.videotable{
             // border-color: green; 
             padding:size(16) size(12);
             vertical-align: middle;
-            min-width: size(140);
+            min-width: size(130);
             @include setBgColor($white,$primary);
             @include font($primaryFont,12,semibold,normal,16);
             text-transform: uppercase;
@@ -25,12 +25,12 @@ table.videotable{
             box-shadow: insetsize(0) size(-1) size(0) $gray-200;
             
             &:first-child {
-               width: 30px;
+               width: size(30);
                min-width: 10px;
-               padding: 0;
+              
             }
             &:last-child {
-                min-width: size(60);
+              
             }
         }
         
@@ -50,10 +50,10 @@ table.videotable{
                 a{
                     @include flex-center-vert;
                     height:100%;
-                    @include font($primaryFont,12,semibold,normal,20);
                     gap: size(12);
                     align-items: flex-start;
-                   
+                    padding: size(10) size(0);
+                    color: $gray-600;
                     @include breakpoint(mobile480) {
                         flex-direction: row;
                     }
@@ -74,12 +74,13 @@ table.videotable{
                         .title {
                             color: $gray-700;
                             @include font($primaryFont,12,semibold,normal,20);
+                            @include line-clamp;
                         }
                         .des-container {
                           @include line-clamp;
                           .des {
                             color: $gray-600;
-                            @include font($primaryFont,12,semibold,normal,20);
+                            @include font($primaryFont,12,normal,normal,20);
                           }
                         } 
                     }
