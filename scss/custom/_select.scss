@@ -1,53 +1,112 @@
 @use "../global" as *;
 @use "../partials" as *;
 
-.nice-select {
-  @include flex-center-vert;
-  // border-color: $signinborder !important;
-  @include w100;
-  height: size(48);
-  line-height: size(48);
+@use '../global' as *;
+@use '../partials' as p;
 
-  &::after {
-    border: none;
-    content: url("data:image/svg+xml,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.3' d='M1 1L8.5 8L16 1' stroke='%234B4B4B' stroke-width='1.58' stroke-linecap='round'/%3E%3C/svg%3E%0A");
-    width: size(17);
-    height: size(10);
-    margin-top: size(0);
-    @include rotate(0);
-    transform-origin: 0%;
-    top: 35%;
-    right: size(16);
-    @include translateY(40%);
-    @include flex-center;
-    @include transitiontransform;
-  }
+.customselect {
+	@include p.w100;
+ 
+background-color: red;
+	.selector {
+		position: relative;
+		cursor: pointer;
+		z-index: 1;
 
-  .current {
-    // color: $primaryText;
-  }
+		.selected {
+			background: $white;
+			@include p.border(solid, 1, $checkborder);
+			@include p.radius(8);
+			@include p.flex-center-between;
+			// gap: p.size(8);
+			padding: p.size(8) p.size(12);
+			min-width: p.size(104);
+	
+			.label {
+				width: calc(100% - p.size(16));
+				color: $textPrimary;
+				@include font($primaryFont, 14, medium, normal, 20);
+				letter-spacing: p.size(0.04);
 
-  .list {
-    background: $white;
-  }
+				&::selection {
+					color: inherit;
+					background: transparent;
+				}
+	
+				span {
+					color: inherit;
+					font: inherit;
 
-  &-dropdown {
-    @include w100;
-    // border-color: $linkborder;
-    box-shadow: none !important;
-  }
+					&::selection {
+						color: inherit;
+						background: transparent;
+					}
+				}
+			}
+	
+			.arrow {
+				transform: rotateZ(0deg);
+				transition-duration: 0.3s;
+				transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
+				width: p.size(16);
+				@include p.flex-center;
+	
+				.icon {
+					width: p.size(11);
+					height: p.size(6);
+					@include p.flex-center;
+					overflow: hidden;
+					margin-top: p.size(-3);
+	
+					svg {
+						@include p.wh100;
+					}
+				}
+	
+				&.expanded {
+					transform: rotateZ(180deg);
 
-  &.open {
-    // border-color: $primary !important;
+					.icon {
+						margin-top: p.size(3);
+					}
+				}
+			}
+		}
+	}
 
-    &::after {
-      transform: rotateX(180deg) !important;
-      top: auto;
-      // transform-origin: 0%;
-    }
+	ul {
+		width: 100%;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		z-index: 1;
+		@include p.setBgColor($white, $textPrimary);
+		@include p.border(solid, 1, $checkborder);
+		@include p.radius(8);
+		letter-spacing: p.size(0.04);
 
-    .current {
-      // color: rgba($primaryText, 0.3);
-    }
-  }
+		li {
+			color: inherit;
+			@include font($primaryFont, 14, normal, normal, 20);
+			cursor: pointer;
+			padding: p.size(8) p.size(12);
+			
+			@include p.hover {
+				@include p.setBgColor($primary, $white);
+			}
+		}
+	}
+
+	.current {
+		background: darken($bodybg, 3%);
+	}
+
+	.hidden {
+		visibility: hidden;
+	}
+
+	.visible {
+		visibility: visible;
+	}
 }

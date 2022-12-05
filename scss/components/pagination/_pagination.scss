@@ -17,6 +17,7 @@
             @include flex-center;
             gap: size(2);
             @include setBgColor($white,$gray-600);
+            @include transitionscolor;
             .round {
                 @include square(4);
     
@@ -28,6 +29,9 @@
 
             &.active {
                 color: $primary;
+            }
+            @include hover {
+                background: $gray-200;
             }
         }
     }

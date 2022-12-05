@@ -11,7 +11,7 @@ table.videotable{
 
 	tr {
 		&:first-child {
-            background-color:tan;
+          
         }
         th {
             // border-color: green; 
@@ -35,7 +35,7 @@ table.videotable{
         }
         
         td {
-            border-color: #EDF2F7; 
+            border-color: $gray-200; 
             vertical-align: middle;
             background-color: $white;
             @include font($primaryFont,14,normal,normal,20);
