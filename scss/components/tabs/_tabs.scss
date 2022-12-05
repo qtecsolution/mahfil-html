@@ -8,6 +8,13 @@
             flex-wrap: nowrap;
             overflow-x: scroll;
             border-bottom: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            @include breakpoint(tab992) {
+                overflow-x: scroll;
+                overflow-y: visible;
+            }
             .nav-item {
               border-radius: 0;
             }

@@ -1452,7 +1452,7 @@
                                   </div>
                                   <div class="inputbox">
                                     <label for="description" class="inputlabel"> Description</label>
-                                    <textarea id="description" class="textareafield" placeholder="Enter Description"></textarea>
+                                    <textarea id="description" rows="14" class="textareafield" placeholder="Enter Description"></textarea>
                                   </div>
 
                             </div>
@@ -1464,7 +1464,23 @@
                                     <p class="des">Select or upload a picture that shows what's in your video. A good thumbnail stands out and draws viewers' attention.</p>
                                 </div>
                                 <div class="right-content-body">
-
+                                   <div class="upload-thumb">
+                                    <input type="file" id="uploadThumb" hidden>
+                                    <label for="uploadThumb" class="uploadlabel">
+                                      <span class="icon">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M1.99984 11.1678C1.63317 11.1678 1.31939 11.0373 1.0585 10.7764C0.79717 10.5151 0.666504 10.2011 0.666504 9.83443V7.83443H1.99984V9.83443H9.99984V7.83443H11.3332V9.83443C11.3332 10.2011 11.2027 10.5151 10.9418 10.7764C10.6805 11.0373 10.3665 11.1678 9.99984 11.1678H1.99984ZM5.33317 8.5011V3.06777L3.59984 4.8011L2.6665 3.83443L5.99984 0.501099L9.33317 3.83443L8.39984 4.8011L6.6665 3.06777V8.5011H5.33317Z" fill="#718096"/>
+                                        </svg>
+                                      </span>
+                                      <span class="text">Upload Thumbnile</span>
+                                    </label>
+                                   </div>
+                                   <figure class="thumbnail-image active">
+                                    <img src="assets/images/videothumb/thumbnai.png" alt="thumbnai" >
+                                   </figure>
+                                   <figure class="thumbnail-image">
+                                    <img src="assets/images/videothumb/thumbnai.png" alt="thumbnai" >
+                                   </figure>
                                 </div>
                             </div>
                         </div>

@@ -83,11 +83,52 @@
         .left-content {
             background: $white;
             padding: size(20);
+            @include flex-column;
+            gap: size(12);
         }
         .right-content {
             background: $white;
             padding: size(20);
             height: 100%;
+            @include flex-column;
+            gap: size(20);
+            &-header {
+                @include flex-column;
+                gap: size(8);
+            }
+            &-body {
+                @include flex;
+                gap: size(16);
+                flex-wrap: wrap;
+            }
+            .upload-thumb {
+                height: size(64);
+                width: size(120);
+                .uploadlabel {
+                 @include border(dashed,2,$gray-400);
+                 @include wh100;
+                 @include flex-center;
+                 flex-direction: column;
+                 text-align: center;
+                 @include font($primaryFont,10,medium,normal,14);
+                 gap: size(4);
+                 color: $gray-600;
+                }
+            }
+            .thumbnail-image {
+                height: size(64);
+                width: size(120);
+                overflow: hidden;
+                outline: size(4) solid transparent;
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+
+                &.active {
+                    outline: size(3) solid $primary;
+                }
+            }
         }
     }
     
