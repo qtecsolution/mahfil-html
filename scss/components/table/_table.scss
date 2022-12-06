@@ -1,115 +1,286 @@
-@use "../../global" as *;
-@use "../../partials" as *;
+@use "../../global"as *;
+@use "../../partials"as *;
 
-table.videotable{
-    thead {
-        
-    }
-    tbody {
+table.videotable {
+    thead {}
 
-    }
+    tbody {}
 
-	tr {
-		&:first-child {
-          
-        }
+    tr {
+        &:first-child {}
+
         th {
             // border-color: green; 
-            padding:size(16) size(12);
+            padding: size(16) size(12);
             vertical-align: middle;
             min-width: size(130);
-            @include setBgColor($white,$primary);
-            @include font($primaryFont,12,semibold,normal,16);
+            @include setBgColor($white, $primary);
+            @include font($primaryFont, 12, semibold, normal, 16);
             text-transform: uppercase;
             letter-spacing: 0.06rem;
             box-shadow: insetsize(0) size(-1) size(0) $gray-200;
-            
+
             &:first-child {
-               width: size(30);
-               min-width: 10px;
-              
+                width: size(30);
+                min-width: 10px;
+
             }
-            &:last-child {
-              
-            }
+
+            &:last-child {}
         }
-        
+
         td {
-            border-color: $gray-200; 
+            border-color: $gray-200;
             vertical-align: middle;
             background-color: $white;
-            @include font($primaryFont,14,normal,normal,20);
-            padding:size(20) size(12);
+            @include font($primaryFont, 14, normal, normal, 20);
+            padding: size(20) size(12);
             color: $gray-600;
+
             &:nth-child(2) {
                 min-width: size(300);
                 padding: 0;
+
                 @include breakpoint(mobile414) {
                     min-width: size(414)
                 }
-                a{
+
+                a {
                     @include flex-center-vert;
-                    height:100%;
+                    height: 100%;
                     gap: size(12);
                     align-items: flex-start;
                     padding: size(10) size(0);
                     color: $gray-600;
+
                     @include breakpoint(mobile480) {
                         flex-direction: row;
                     }
+
                     .video-thumb {
                         height: size(64);
                         width: size(120) !important;
                         overflow: hidden;
+
                         img {
                             @include wh100;
                             object-fit: cover;
                         }
                     }
+
                     .title-des {
                         @include flex-column;
                         padding: size(0) size(20);
                         width: calc(100% - size(120));
                         gap: size(8);
+
                         .title {
                             color: $gray-700;
-                            @include font($primaryFont,12,semibold,normal,20);
+                            @include font($primaryFont, 12, semibold, normal, 20);
                             @include line-clamp;
                         }
+
                         .des-container {
-                          @include line-clamp;
-                          .des {
-                            color: $gray-600;
-                            @include font($primaryFont,12,normal,normal,20);
-                          }
-                        } 
+                            @include line-clamp;
+
+                            .des {
+                                color: $gray-600;
+                                @include font($primaryFont, 12, normal, normal, 20);
+                            }
+                        }
                     }
 
                 }
             }
-            
-          .dropdown {
-            &-menu {
-                border: none;
-                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+            .dropdown {
+                &-menu {
+                    border: none;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+
+                &-item {
+                    @include transitionsall;
+                    color: $gray-700;
+                    @include flex;
+                    align-items: center;
+                    gap: size(8);
+                    @include font($primaryFont, 14, normal, normal, 20);
+
+                    @include hover {
+                        background-color: $gray-200;
+                    }
+                }
+
+                .dropdown-toggle::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.table.comments-table {
+
+    thead {}
+
+    tbody {}
+
+    tr {
+        &:first-child {}
+
+        th {
+            // border-color: green; 
+            padding: size(16) size(12);
+            vertical-align: middle;
+            min-width: size(130);
+            @include setBgColor($white, $primary);
+            @include font($primaryFont, 12, semibold, normal, 16);
+            text-transform: uppercase;
+            letter-spacing: 0.06rem;
+            box-shadow: insetsize(0) size(-1) size(0) $gray-200;
+            max-width: size(200);
+
+            &:first-child {
+                width: size(30);
+                min-width: 10px;
+
             }
 
-            &-item {
-                @include transitionsall;
-                color: $gray-700;
+            &:last-child {}
+        }
+
+        td {
+            border-color: $gray-200;
+            vertical-align: middle;
+            background-color: $white;
+            @include font($primaryFont, 14, normal, normal, 20);
+            padding: size(20) size(12);
+            color: $gray-600;
+
+            &:nth-child(2) {
+                min-width: size(200);
+                padding: 0;
+
+                @include breakpoint(mobile414) {
+                    min-width: size(220);
+                    max-width: size(360);
+                }
+
+                a {
+                    @include flex-center-vert;
+                    height: 100%;
+                    gap: size(12);
+                    align-items: flex-start;
+                    padding: size(10) size(0);
+                    color: $gray-600;
+
+                    @include breakpoint(mobile480) {
+                        flex-direction: row;
+                    }
+
+                    .video-thumb {
+                        height: size(64);
+                        width: size(120) !important;
+                        overflow: hidden;
+
+                        img {
+                            @include wh100;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .title-des {
+                        @include flex-column;
+                        padding: size(0) size(20);
+                        width: calc(100% - size(120));
+                        gap: size(8);
+
+                        .title {
+                            color: $gray-700;
+                            @include font($primaryFont, 12, semibold, normal, 20);
+                            @include line-clamp;
+                        }
+
+                        .des-container {
+                            @include line-clamp;
+
+                            .des {
+                                color: $gray-600;
+                                @include font($primaryFont, 12, normal, normal, 20);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .name-image {
                 @include flex;
+                gap: size(10);
                 align-items: center;
-                gap: size(8);
-                @include font($primaryFont,14,normal,normal,20);
-                @include hover{
-                    background-color: $gray-200;
+                min-width: size(160);
+
+                .user-thumb {
+                    @include square(24);
+                    overflow: hidden;
+                    @include circle;
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .comment-video {
+                @include flex-center-horiz;
+                gap: size(12);
+                .video-thumb {
+                    width: size(88);
+                    height: size(46);
+                    overflow: hidden;
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+                .video-title {
+                    @include flex-center;
+                   h2 {
+                    color: $gray-600;
+                    @include font($primaryFont, 12, normal, normal, 20);
+                   }
+                }
+            }
+            .dropdown {
+                &-menu {
+                    border: none;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+
+                &-item {
+                    @include transitionsall;
+                    color: $gray-700;
+                    @include flex;
+                    align-items: center;
+                    gap: size(8);
+                    @include font($primaryFont, 14, normal, normal, 20);
+
+                    @include hover {
+                        background-color: $gray-200;
+                    }
+                }
+
+                .dropdown-toggle::after {
+                    display: none;
                 }
             }
            
-            .dropdown-toggle::after {
-                display:none;
-            }
-          }
         }
-	}
+    }
+    .footer-row {
+        background-color: $gray-200;
+        padding-block: 0;
+    }
 }
