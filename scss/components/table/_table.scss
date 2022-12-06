@@ -88,7 +88,28 @@ table.videotable{
                 }
             }
             
-          
+          .dropdown {
+            &-menu {
+                border: none;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            }
+
+            &-item {
+                @include transitionsall;
+                color: $gray-700;
+                @include flex;
+                align-items: center;
+                gap: size(8);
+                @include font($primaryFont,14,normal,normal,20);
+                @include hover{
+                    background-color: $gray-200;
+                }
+            }
+           
+            .dropdown-toggle::after {
+                display:none;
+            }
+          }
         }
 	}
 }
