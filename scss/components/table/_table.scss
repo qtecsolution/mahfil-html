@@ -280,7 +280,31 @@ table.videotable {
         }
     }
     .footer-row {
-        background-color: $gray-200;
+        background-color: $gray-100;
         padding-block: 0;
+        padding-block: size(13);
+        padding-left: size(50);
+        .footer-top {
+            @include flex-between;
+        }
+        .like-comment {
+            @include flex;
+            gap:size(20);
+
+            .like,
+            .comment {
+                @include flex;
+                align-items: center;
+                gap: size(7);
+                &-icon {
+                 cursor: pointer;
+                }
+            }
+            .comment {
+                cursor: pointer;
+            }
+        }
+
+
     }
 }

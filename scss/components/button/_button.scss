@@ -139,3 +139,14 @@ button,
   color: $gray-600;
   box-shadow: 0px 4.95074px 6.60099px rgba(32, 29, 67, 0.07);
 }
+
+.btn-reply {
+  padding: size(6) size(16);
+  @include border(solid,1,$gray-400);
+  @include font($primaryFont, 12, normal, normal, 18);
+  @include transitionsbackground;
+  color: $gray-600;
+  @include hover {
+    background: $gray-200;
+  }
+}
