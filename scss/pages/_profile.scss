@@ -208,6 +208,9 @@
         @include breakpoint(desktop1100) {
           width: size(444);
         } 
+        @include breakpoint(desktop1600) {
+          width: 50%;
+        }
 
         &-header {
 
@@ -305,7 +308,7 @@
               @include font($primaryFont, 14, medium, normal, 17);
               padding: size(13.5) size(16);
               @include transitionsall;
-              filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.07));
+          
 
               &::placeholder {
                 color: $textPlaceholder;
@@ -325,7 +328,7 @@
             gap: size(10);
             .border-shadow {
               @include border(solid,1,$gray-400);
-              filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.07));
+             
             }
             .keywords {
              
