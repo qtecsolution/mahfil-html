@@ -279,30 +279,34 @@ table.videotable {
            
         }
     }
-    .footer-row {
+    .likecomment {
         background-color: $gray-100;
         padding-block: 0;
         padding-block: size(13);
         padding-left: size(50);
-        .footer-top {
+        &-buttons {
             @include flex-between;
-        }
-        .like-comment {
-            @include flex;
-            gap:size(20);
-
-            .like,
-            .comment {
+            .like-comment {
                 @include flex;
-                align-items: center;
-                gap: size(7);
-                &-icon {
-                 cursor: pointer;
+                gap:size(20);
+    
+                .like,
+                .comment {
+                    @include flex;
+                    align-items: center;
+                    gap: size(7);
+                    &-icon {
+                     cursor: pointer;
+                    }
+                }
+                .comment {
+                    cursor: pointer;
                 }
             }
-            .comment {
-                cursor: pointer;
-            }
+            
+        }
+        &-collapsed {
+         
         }
 
 
