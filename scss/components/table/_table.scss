@@ -281,11 +281,13 @@ table.videotable {
     }
     .likecomment {
         background-color: $gray-100;
-        padding-block: 0;
+
         padding-block: size(13);
         padding-left: size(50);
         &-buttons {
             @include flex-between;
+            padding-bottom: size(10);
+            @include border-single(bottom,solid,1,$gray-300);
             .like-comment {
                 @include flex;
                 gap:size(20);

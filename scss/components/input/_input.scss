@@ -30,3 +30,40 @@
   }
 
 
+  .replybox {
+  padding-right: size(20);
+  margin-top: size(20);
+  margin: size(20) size(40);
+    &-body{
+      
+      .replyinput {
+        @include w100;
+       @include border(solid,1,$gray-300);
+       background: transparent;
+       padding: size(8);
+       @include font($primaryFont, 14, medium, normal, 17);
+       &::placeholder {
+        color: $textPlaceholder;
+      }
+
+      &:focus {
+        border-color: $primary;
+      }
+      }
+    }
+
+    &-footer {
+      @include flex-end;
+      padding: size(4) size(0);
+      gap: size(24);
+      .cancel {
+        color: $gray-500;
+        @include font($primaryFont, 14, medium, normal, 17);
+      }
+      .reply {
+        color: $gray-700;
+        @include font($primaryFont, 14, medium, normal, 17);
+      }
+    }
+  }
+
