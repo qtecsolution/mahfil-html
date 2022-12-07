@@ -2,3 +2,122 @@
 @use "../partials" as *;
 
 /**======= HOME-BANNER =======**/
+
+.welcome {
+    background: url(https://qtecsolution.github.io/mahfil_dashboard_html/assets/images/welcome.png) no-repeat;
+    margin: size(20) size(0);
+    min-height: size(105);
+    @include w100;
+    padding: size(30) size(10);
+    background-size:cover;
+    @include radius(5);
+    @include breakpoint(tab992) {
+    background-position: center;
+
+    }
+    &-title {
+        color: $white;
+        @include font($primaryFont,18,semibold,normal,24);
+        @include breakpoint (tab992){
+            @include font($primaryFont,20,semibold,normal,24);
+        }
+    }
+    &-text {
+        color: $gray-400;
+        @include font($primaryFont,14,medium,normal,20);
+        padding-top: size(10);
+        @include breakpoint (tab992){
+            @include font($primaryFont,16,medium,normal,20);
+        }
+    }
+}
+
+
+ // Congratulation and subscriber part
+ .congratulation-sub {
+    .congratulation{
+        background: url(../../assets/images/home/congratulationbg.png) no-repeat;
+        height: 100%;
+        min-height: size(300);
+        background-size: cover;
+        background-position: center center;
+        padding: size(30) size(30);
+        @include breakpoint(tab992) {
+            padding: size(60) size(40);
+        }
+        &-title{
+            color: $gray-800;
+            @include font($primaryFont,26,semibold,normal,32);
+            @include breakpoint (desktop1200){
+                @include font($primaryFont,36,semibold,normal,42);
+            }
+            span{
+                color: $gray-600;
+                @include font($primaryFont,20,semibold,normal,26);
+                @include breakpoint (desktop1200){
+                    @include font($primaryFont,28,semibold,normal,34);
+                }
+            }
+        }
+    }
+}
+
+.recent-subscriber {
+    background-color:$white;
+    padding:size(14);
+    &-content {
+        @include flex-column;
+        gap: size(20);
+    }
+    &-header {
+        .recent-title {
+            color: $gray-800;
+            @include font($primaryFont,18,bold,normal,24);
+            @include breakpoint (desktop1200){
+                @include font($primaryFont,20,bold,normal,24);
+            }
+        }
+    }
+    &-body {
+        .subscriber-list {
+            @include list-vertical;
+            gap: size(10);
+            &-item {
+                @include border (solid,1,$gray-400);
+                @include radius(10);
+                padding: size(14);
+                @include flex-center-between;
+                .subscriber{
+                    @include flex-center;
+                    gap: size(16);
+        
+                    &-image{
+                        @include square(24);
+                        @include circle;
+                        overflow: hidden;
+                        @include breakpoint (tab992){
+                            @include square(30);
+                        }
+                        img{
+                            @include wh100;
+                            object-fit: cover;
+        
+                        }
+                    }
+                    &-name{
+                        @include font($primaryFont,14,semibold,normal,18);
+                        color: $textdark;
+                        @include breakpoint(tab992) {
+                            @include font($primaryFont,16,semibold,normal,18);
+                        }
+                    }
+                }
+                .time{
+                    color: $gray-500;
+                    @include font($primaryFont,14,medium,normal,20);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,26 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.total-card {
+ background: $white;
+ @include flex-column;
+ gap: size(8);
+ padding: size(14);
+ padding-bottom: size(32);
+ padding-right: 0;
+ @include transitionsall;
+ @include hover {
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+    
+ }
+ .total-title {
+    color: $gray-600;
+    @include font($primaryFont,14,medium,normal,20);
+ }
+ .total-number {
+    color: $gray-800;
+    @include font($primaryFont,20,bold,normal,20);
+
+ }
+}
+
