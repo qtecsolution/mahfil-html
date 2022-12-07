@@ -3,10 +3,17 @@
 @use "../partials" as *;
 .comments {
    &-content {
-
+      @include flex-column;
+      gap: size(20);
    } 
    &-header {
-
+      .header-title {
+         color: $gray-800;
+         @include font($primaryFont,18,bold,normal,24);
+         @include breakpoint(tab992) {
+         @include font($primaryFont,20,bold,normal,24);
+         }
+      }
    }
 
    &-body {

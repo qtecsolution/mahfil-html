@@ -2,6 +2,7 @@
 @use "../../partials"as *;
 
 table.videotable {
+   
     thead {}
 
     tbody {}
@@ -94,8 +95,11 @@ table.videotable {
             }
 
             .dropdown {
+                span {
+                    cursor: pointer;
+                   }
                 &-menu {
-                    border: none;
+                    // border: none;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 }
 
@@ -106,6 +110,7 @@ table.videotable {
                     align-items: center;
                     gap: size(8);
                     @include font($primaryFont, 14, normal, normal, 20);
+
 
                     @include hover {
                         background-color: $gray-200;
@@ -157,6 +162,7 @@ table.videotable {
             @include font($primaryFont, 14, normal, normal, 20);
             padding: size(20) size(12);
             color: $gray-600;
+            
 
             &:nth-child(2) {
                 min-width: size(200);
@@ -254,6 +260,9 @@ table.videotable {
                 }
             }
             .dropdown {
+               span {
+                cursor: pointer;
+               }
                 &-menu {
                     border: none;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -281,13 +290,12 @@ table.videotable {
     }
     .likecomment {
         background-color: $gray-100;
+        
 
-        padding-block: size(13);
+        padding-block: size(10);
         padding-left: size(50);
         &-buttons {
             @include flex-between;
-            padding-bottom: size(10);
-            @include border-single(bottom,solid,1,$gray-300);
             .like-comment {
                 @include flex;
                 gap:size(20);
@@ -299,10 +307,32 @@ table.videotable {
                     gap: size(7);
                     &-icon {
                      cursor: pointer;
+                     svg {
+                        @include transitiontransform;
+                       
+                     } 
+                    
+                    }
+                    .arrow {
+                        margin-top: size(-4);
+                    }
+                }
+                .like {
+                    .like-count {
+                        margin-top: size(4);
                     }
                 }
                 .comment {
                     cursor: pointer;
+                    
+                    &:not(.collapsed){
+                        .arrow {
+                            svg {
+                                @include transitiontransform;
+                               transform: rotate(-180deg);
+                            }
+                        }
+                    }
                 }
             }
             
