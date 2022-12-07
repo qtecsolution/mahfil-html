@@ -121,3 +121,37 @@
     }
 }
 
+
+ // view-comment
+ .view-comment {
+    padding: size(14) size(0);
+    .view {
+        background: $white;
+        @include h100;
+        @include radius(6);
+    }
+    // latest comment
+    .latest-comment {
+        background-color: $white;
+        @include h100;
+        padding: size(10);
+        @include radius(6);
+        &-content {
+            @include flex-column;
+            gap: size(20);
+            .latest-title{
+                color: $gray-800;
+                @include font($primaryFont,18,bold,normal,24);
+                @include breakpoint (desktop1200){
+                    @include font($primaryFont,20,bold,normal,24);
+                }
+            }
+        }
+        &-header {
+
+        }
+        &-body {
+
+        }
+    }
+}

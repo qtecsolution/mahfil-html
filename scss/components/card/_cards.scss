@@ -24,3 +24,42 @@
  }
 }
 
+.comment-cards {
+   @include flex-column;
+   gap: size(10);
+   .comment-card {
+       padding: size(20);
+       @include border(solid,1,$gray-400);
+       @include radius (10);
+       &-header {
+           @include flex;
+           gap:size(6);
+           align-items: center;
+           .comment-image {
+               @include square (30);
+               @include circle;
+              
+               img {
+                   @include wh100;
+                   @include circle;
+                   
+               }
+           }
+           .name {
+               color: $gray-800;
+               @include font ($primaryFont ,16,semibold,normal,20);
+           }
+           .time {
+               color: $gray-500;
+               @include font ($primaryFont ,16,medium,normal,20);
+           }
+       }
+       &-body {
+           padding-left: size(30);
+           .comment-text{
+               color: $gray-800;
+               @include font($primaryFont,14,normal,normal,20);
+           }
+       }
+   }
+}

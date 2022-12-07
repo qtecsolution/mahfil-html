@@ -76,3 +76,49 @@
         }
     }
 }
+
+.view {
+    .nav {
+   
+        @include flex-between;
+        padding-left: size(10);
+        padding-right: size(10);
+       
+        @include breakpoint(mobile414) {
+            gap: size(20);
+            padding-left: size(20);
+            padding-right: size(20);
+        }
+    }
+    .nav-link {
+        padding: size(20) size(0);
+        color: $gray-600;
+        @include font($primaryFont,14,medium,normal,20);
+        border: none;
+        @include border-single(bottom,solid,3,transparent);
+        @include hover {
+            border-color: transparent;
+        }
+        
+    }
+    .nav-tabs .nav-link.active {
+        @include border-single(bottom,solid,3,$primary);
+        color: $primary;
+        background: transparent;
+    }
+    
+   
+    .nav-tabs {
+       border: none;
+    }
+    
+    .tab-items {
+        @include list-horizontal;
+        gap: size(10);
+        @include breakpoint(mobile414) {
+            gap: size(20);
+        }
+    
+    }
+}
+
