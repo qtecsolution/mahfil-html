@@ -41,8 +41,11 @@
   &-body {
     margin-bottom: size(60);
     padding: 0 size(20);
+    height: 100%;
     .step-container {
       @include w100;
+      @include flex-column;
+      gap: size(50);
       @include breakpoint(mobile768) {
         width: size(445);
         margin: auto
@@ -50,7 +53,7 @@
       .form1 {
         @include flex-column;
           gap: size(16); 
-          
+          padding-bottom: size(20);
           .inputbox {
             @include flex-column;
             gap: size(8);
@@ -156,6 +159,9 @@
             display: inline-block;
             @include circle;
             position: relative;
+            &.filled {
+              background: $primarydeep;
+            }
             .text {
               position: absolute;
               bottom: size(-25);
@@ -198,6 +204,7 @@
       .form2 {
         @include flex-column;
         gap: size(20);
+        padding-bottom: size(20);
         .cover-thumb {
           @include w100;
           height: size(214);
@@ -260,7 +267,9 @@
           z-index: 2;
           position: relative;
           @include square(120);
-          margin-left: size(26);
+          left: 50%;
+          transform: translate(-50%);
+          margin: size(20) size(0);
           img {
             @include wh100;
             @include circle;
@@ -280,6 +289,11 @@
 
         .btn-wrapper {
           @include flex-end;
+          gap: size(14);
+          @include breakpoint(mobile576) {
+            gap: size(20);
+          }
+          
           .btn-submit {
             width: auto;
             @include font($primaryFont,14,semibold,normal,14);
