@@ -173,4 +173,8 @@ button,
 .btn-back {
   color: $gray-600;
   padding-inline: size(20);
+  @include transitionsall;
+  @include  hover {
+    background: $gray-200;
+  }
 }

@@ -101,7 +101,7 @@
               </li>
 
               <li class="dropdownlist-item">
-                <button type="button" class="btn-create">
+                <button type="button" class="btn-create" data-bs-toggle="modal" data-bs-target="#createChannelModal">
                   <span class="icon">
                     <svg
                       width="26"
@@ -954,7 +954,7 @@
                     </li>
 
                     <li class="droplist-item">
-                      <button type="button" class="btn-create">
+                      <button type="button" class="btn-create" data-bs-toggle="modal" data-bs-target="#createChannelModal">
                         <span class="icon">
                           <svg
                             width="26"
@@ -1421,16 +1421,30 @@
                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#reaction-tab-pan" type="button" role="tab" aria-controls="reaction-tab-pan" aria-selected="false">Reactions</button>
                   </li>
                   </div>
-
-                  <select name="" id="">
-                  <option value="">2022</option>
-                  <option value="">2021</option>
-                  <option value="">2020</option>
-                  <option value="">2019</option>
-                  <option value="">2018</option>
-                  <option value="">2017</option>
-                  <option value="">2016</option>
-                  </select>
+                  <!-- custom select -->
+                  <div class="customselect">
+                    <div class="select-wrapper">
+                      <div class="select">
+                        <div class="select-trigger">
+                          <span class="selectedvalue">2022</span>
+                          <span class="arrow">
+                            <svg width="12" height="12" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4 5.06938L0 1.06938L0.933333 0.136047L4 3.20271L7.06667 0.136047L8 1.06938L4 5.06938Z" fill="#718096"/>
+                            </svg>
+                          </span>
+                        </div>
+                        
+                        <div class="custom-options">
+                          <span class="custom-option selected" data-value="2022">2022</span>
+                          <span class="custom-option" data-value="2022">2021</span>
+                          <span class="custom-option" data-value="2022">2020</span>
+                          <span class="custom-option" data-value="2022">2019</span>
+                          <span class="custom-option" data-value="2022">2018</span>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                   <div class="tab-pane fade show active py-2" id="view-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
@@ -1510,13 +1524,28 @@
                 <div class="videoshome-content">
                   <div class="videoshome-header">
                     <h2 class="videos-title">Latest Videos</h2>
-                    <select name="" id="">
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                    </select>
+                    <div class="customselect">
+                      <div class="select-wrapper">
+                        <div class="select">
+                          <div class="select-trigger">
+                            <span class="selectedvalue">last 90 days</span>
+                            <span class="arrow">
+                              <svg width="12" height="12" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.06938L0 1.06938L0.933333 0.136047L4 3.20271L7.06667 0.136047L8 1.06938L4 5.06938Z" fill="#718096"></path>
+                              </svg>
+                            </span>
+                          </div>
+                          
+                          <div class="custom-options">
+                            <span class="custom-option" data-value="7">Last 7 days</span>
+                            <span class="custom-option" data-value="30">Last 30 days</span>
+                            <span class="custom-option selected" data-value="90">Last 90 days</span>
+                            <span class="custom-option" data-value="365">Last 365 days</span>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="videoshome-body">
                     <div class="video-des">
@@ -1589,13 +1618,28 @@
                 <div class="videoshome-content">
                   <div class="videoshome-header">
                     <h2 class="videos-title">Latest Videos</h2>
-                    <select name="" id="">
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                      <option value="">Last 7 days </option>
-                    </select>
+                    <div class="customselect">
+                      <div class="select-wrapper">
+                        <div class="select open">
+                          <div class="select-trigger">
+                            <span class="selectedvalue">last 90 days</span>
+                            <span class="arrow">
+                              <svg width="12" height="12" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.06938L0 1.06938L0.933333 0.136047L4 3.20271L7.06667 0.136047L8 1.06938L4 5.06938Z" fill="#718096"></path>
+                              </svg>
+                            </span>
+                          </div>
+                          
+                          <div class="custom-options">
+                            <span class="custom-option" data-value="7">Last 7 days</span>
+                            <span class="custom-option" data-value="30">Last 30 days</span>
+                            <span class="custom-option selected" data-value="90">Last 90 days</span>
+                            <span class="custom-option" data-value="365">Last 365 days</span>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="videoshome-body">
                     <div class="video-des">
@@ -1679,11 +1723,238 @@
     </footer>
     <!-- FOOTER-END -->
 
+     <!-- ===================== CREATE CHANNEL  MODAL START ============================ -->
+    
+     <div class="modal fade filterModal pe-0"  id="createChannelModal" tabindex="-1" aria-labelledby="exampleModalLabel" 
+     aria-hidden="true">
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header border-0">
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+             <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M1.83415 11.8329L0.66748 10.6663L5.33415 5.99959L0.66748 1.33293L1.83415 0.16626L6.50081 4.83293L11.1675 
+               0.16626L12.3341 1.33293L7.66748 5.99959L12.3341 10.6663L11.1675 11.8329L6.50081 7.16626L1.83415 11.8329Z" fill="#718096"/>
+             </svg>
+                               
+           </button>
+         </div>
+   
+         <div class="modal-body">
+           <div class="step-container">
+             <!-- form 1 -->
+             <div class="form1" id="form1">
+               <div class="create">
+                 <h2>Create a new Channel</h2>
+                 <div class="stepper-container">
+                   <span class="big-round">
+                     <span class="text">Channel Info</span>
+                   </span>
+                   <span class="middle-line"></span>
+                   <span class="small-round">
+                     <span class="text">Upload photos</span>
+                   </span>
+                  
+                 </div>
+               </div>
+               <div class="inputbox">
+                 <label for="channelname" class="inputlabel"> Channel Name </label>
+                 <input type="text" id="channelname" class="inputfield" placeholder="Mega Bangla Tv" autocomplete="off">
+               </div>
+
+               <div class="inputbox">
+                 <label for="description" class="inputlabel"> Description</label>
+                 <textarea id="description" class="textareafield" placeholder="Enter Description"></textarea>
+               </div>
+
+               <div class="keywordbox">
+                 <p class="keyword-title">Keywords</p>
+                 <div class="border-shadow">
+                   <div class="keywords">
+
+                     <button class="keywordbtn">
+                       <span class="keywordbtn-text">Shariah</span>
+                       <span class="keywordbtn-icon">
+
+                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                           4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                           5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                         </svg>
+                           
+                       </span>
+                     </button>
+                     <button class="keywordbtn">
+                       <span class="keywordbtn-text">Salat</span>
+                       <span class="keywordbtn-icon">
+
+                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                           4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                           5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                         </svg>
+                           
+                       </span>
+                     </button>
+                     <button class="keywordbtn">
+                       <span class="keywordbtn-text">নামাজ</span>
+                       <span class="keywordbtn-icon">
+
+                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                           4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                           5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                         </svg>
+                           
+                       </span>
+                     </button>
+                     <button class="keywordbtn">
+                       <span class="keywordbtn-text">অজু</span>
+                       <span class="keywordbtn-icon">
+
+                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                           4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                           5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                         </svg>
+                           
+                       </span>
+                     </button>
+                     <button class="keywordbtn">
+                       <span class="keywordbtn-text">ইসলাম</span>
+                       <span class="keywordbtn-icon">
+
+                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                           4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                           5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                         </svg>
+                           
+                       </span>
+                     </button>
+                     <button class="keywordbtn">
+                       <span class="keywordbtn-text">মাহফিল</span>
+                       <span class="keywordbtn-icon">
+
+                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                           4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                           5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                         </svg>
+                           
+                       </span>
+                     </button>
+
+                   </div>
+                 </div>
+                 <div class="btn-wrapper">
+                   <button class="btn-next">
+                     <span>Next</span>
+                     <span>
+                       <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z" fill="white"/>
+                       </svg>
+                     </span>
+                   </button>
+                 </div>
+               </div>
+
+             </div>
+          
+             <!-- form 2 -->
+
+             <div class="form2" id="form2">
+               <div class="create">
+                 <h2>Create a new Channel</h2>
+                 <div class="stepper-container">
+                   <span class="small-round filled">
+                     <span class="text">Upload photos</span>
+                   </span>
+                   <span class="middle-line"></span>
+
+                   <span class="big-round">
+                     <span class="text">Channel Info</span>
+                   </span>
+                  
+                  
+                 </div>
+               </div>
+               <figure class="cover-thumb">
+                 <img src="assets/images/home/modal-cover.png" alt="cover image ">
+                 <!-- upload cover -->
+                 <div class="upload-cover">
+                   <input type="file" id="uploadcover" hidden="">
+                   <label for="uploadcover" class="uploadcover">
+                     <span class="uploadcover-icon">
+                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <path d="M1.65837 9.37996C1.33753 9.37996 1.06298 9.26583 0.834699 9.03755C0.606032 8.80888 
+                         0.491699 8.53413 0.491699 8.2133V6.4633H1.65837V8.2133H8.65837V6.4633H9.82503V8.2133C9.82503 
+                         8.53413 9.71089 8.80888 9.48262 9.03755C9.25395 9.26583 8.9792 9.37996 8.65837 9.37996H1.65837ZM4.57503 
+                         7.04663V2.29246L3.05837 3.80913L2.2417 2.9633L5.15837 0.0466309L8.07503 2.9633L7.25837 3.80913L5.7417 
+                         2.29246V7.04663H4.57503Z" fill="#718096"/>
+                       </svg>
+                         
+                     </span>
+                     <span class="uploadcover-title">Upload Cover </span>
+                   </label>
+                 </div>
+
+               </figure> 
+               <figure class="profile-thumb">
+                 <img src="assets/images/home/modal-profile.png" alt="profilepic">
+
+                 <div class="upload-profile">
+                   <input type="file" id="uploadprofile" hidden="">
+                   <label for="uploadprofile">
+                     <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <circle cx="24" cy="23.5" r="23.5" fill="#F7FAFC"></circle>
+                       <mask id="uploadicon" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="12" y="8" width="25" height="25">
+                         <rect x="12.9727" y="8.69482" width="24" height="24" fill="#D9D9D9"></rect>
+                       </mask>
+                       <g mask="url(#uploadicon)">
+                         <path d="M14.9727 32.6948V28.6948H34.9727V32.6948H14.9727ZM16.9727 26.6948V22.9448L26.0227 13.8948L29.7727 
+                         17.6448L20.7227 26.6948H16.9727ZM18.9727 24.6948H19.8727L26.9727 17.6448L26.0227 16.6948L18.9727 23.7948V24.6948ZM30.8977 
+                         16.5448L27.1477 12.7948L28.9477 10.9948C29.131 10.7948 29.3643 10.6988 29.6477 10.7068C29.931 10.7155 30.1643 10.8115 
+                         30.3477 10.9948L32.6977 13.3448C32.881 13.5282 32.9727 13.7575 32.9727 14.0328C32.9727 14.3075 32.881 14.5448 32.6977 
+                         14.7448L30.8977 16.5448Z" fill="#718096"></path>
+                       </g>
+                     </svg>
+                   </label>
+                 </div>
+               </figure>
+
+               <div class="btn-wrapper">
+                 <button class="btn-back">
+                   <span>
+                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <mask id="mask0_322_12775" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                       <rect x="24.5" y="24" width="24" height="24" transform="rotate(180 24.5 24)" fill="#D9D9D9"/>
+                       </mask>
+                       <g mask="url(#mask0_322_12775)">
+                       <path d="M10.5 6L11.9 7.45L8.35 11H20.5V13H8.35L11.9 16.55L10.5 18L4.5 12L10.5 6Z" fill="#718096"/>
+                       </g>
+                     </svg>
+                       
+                   </span>
+                   <span>Back</span>
+                 </button>
+                 <button class="btn-submit">Create Channel</button>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+ <!-- ===================== CREATE CHANNEL  MODAL END ============================ -->
+
+
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- TOOLTIP JS -->
     <script src="assets/js/tooltip/tooltip.js"></script>
-
+    <!--  custom select-->
+    <script src="assets/js/select/select.js"></script>
     <!-- SEARCH-SUGGESTIONS -->
     <script src="assets/js/search-suggestion/mobsuggestion.js"></script>
     <script src="assets/js/search-suggestion/desksuggestion.js"></script>

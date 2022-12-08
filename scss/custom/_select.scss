@@ -108,7 +108,8 @@
 		}
 	  }
 	}
-  }
+  } 
+  
   
 
 .date-select{
@@ -233,4 +234,24 @@
 		  }
 		}
 	  }
+}
+
+.view-comment , .videos {
+	.select {
+		&-trigger {
+			@include border(solid,1,$gray-400);
+			@include radius(25);
+		}
+	}
+}
+
+
+.videos {
+	.select {
+		&-trigger {
+			@include border(solid,1,$gray-400);
+			@include radius(25);
+			width: size(160);
+		}
+	}
 }
