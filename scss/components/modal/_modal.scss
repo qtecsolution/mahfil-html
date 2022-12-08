@@ -40,6 +40,7 @@
 
   &-body {
     margin-bottom: size(60);
+    padding: 0 size(20);
     .step-container {
       @include w100;
       @include breakpoint(mobile768) {
@@ -123,7 +124,77 @@
           }
 
       }
+      .create {
+        max-width: 80%;
+        margin: auto;
+        text-align: center;
+        @include flex-column;
+        gap: size(16); 
+        @include breakpoint(tab992) {
+          gap: size(24);
+        }
+        h2 {
+          text-align: center;
+          color: $gray-700;
+          @include font($primaryFont,20,semibold,normal,20); 
+          @include breakpoint(mobile576) {
+            @include font($primaryFont,24,semibold,normal,24); 
+          }
+          @include breakpoint(tab992) {
+            @include font($primaryFont,28,semibold,normal,28); 
 
+          }
+        }
+        .stepper-container {
+          @include flex;
+          align-items: center;
+          margin-bottom: size(50);
+          width: size(90%);
+          .small-round {
+            @include square(20);
+            background: $gray-200;
+            display: inline-block;
+            @include circle;
+            position: relative;
+            .text {
+              position: absolute;
+              bottom: size(-25);
+              display: inline-block;
+              width: size(130);
+              left: size(-30);
+              @include font($primaryFont,14,medium,normal,14);
+              color: $gray-600;
+            }
+          
+          }
+          .big-round {
+            @include square(36);
+            background: $gray-200;
+            display: inline-block;
+            @include circle;
+            @include border(solid,3,$primarydeep);
+            position: relative;
+            .text {
+              position: absolute;
+              bottom: size(-25);
+              display: inline-block;
+              width: size(130);
+              left: size(-30);
+              @include font($primaryFont,14,medium,normal,14);
+              color: $gray-800;
+            }
+          }
+          .middle-line {
+            width: calc(100% - size(56));
+            height: size(1);
+            display: inline-block;
+            background: $gray-300;
+            flex: 1;
+          }
+  
+        }
+      }
+      
       .form2 {
         @include flex-column;
         gap: size(20);
