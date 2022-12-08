@@ -115,11 +115,105 @@
             .btn-next {
               padding-inline: 0;
               font-size: size(14);
+              @include font($primaryFont,14,semibold,normal,14);
+               background: $primary;
             }
             
             
           }
 
+      }
+
+      .form2 {
+        @include flex-column;
+        gap: size(20);
+        .cover-thumb {
+          @include w100;
+          height: size(214);
+          position: relative;
+
+          &:after {
+            // content:'';
+            // position:absolute;
+            // @include wh100;
+            // top:0; left:0;
+            // background:rgba(0,0,0,0.5);
+            // opacity:1;
+            // @include radius(4);
+            
+        }
+          img {
+            @include wh100;
+            object-fit: cover;
+            @include radius(4);
+
+          }
+          .upload-cover {
+            position: absolute;
+            bottom: size(12);
+            right: size(12);
+            z-index: 1;
+
+            .uploadcover {
+              @include border(solid,1,$gray-600);
+              @include setBgColor(transparent,$gray-600);
+              padding: size(4) size(10);
+              @include font($primaryFont, 12, medium, normal, 24);
+              @include flex-center;
+              gap: size(10);
+              @include transitionsall;
+              cursor: pointer;
+              @include breakpoint(mobile576) {
+                padding: size(6) size(14);
+              }
+              svg {
+                path {
+                  @include transitionsall;
+                }
+              }
+              @include hover {
+                @include setBgColor($primary,$white);
+                border-color: $primary;
+                svg {
+                  path {
+                    fill: $white;
+                  }
+                }
+              }
+            }
+          }
+
+        } 
+        
+        .profile-thumb {
+          z-index: 2;
+          position: relative;
+          @include square(120);
+          margin-left: size(26);
+          img {
+            @include wh100;
+            @include circle;
+            object-fit: cover;
+          }
+
+          .upload-profile {
+            position: absolute;
+            bottom: size(0);
+            right: size(0);
+            label {
+              cursor: pointer;
+              @include circle;
+            }
+          }
+        }
+
+        .btn-wrapper {
+          @include flex-end;
+          .btn-submit {
+            width: auto;
+            @include font($primaryFont,14,semibold,normal,14);
+          }
+        }
       }
     }
   }
