@@ -101,7 +101,7 @@
               </li>
 
               <li class="dropdownlist-item">
-                <button type="button" class="btn-create">
+                <button type="button" class="btn-create" data-bs-toggle="modal" data-bs-target="#createChannelModal">
                   <span class="icon">
                     <svg
                       width="26"
@@ -954,7 +954,7 @@
                     </li>
 
                     <li class="droplist-item">
-                      <button type="button" class="btn-create">
+                      <button type="button" class="btn-create" data-bs-toggle="modal" data-bs-target="#createChannelModal">
                         <span class="icon">
                           <svg
                             width="26"
@@ -2103,6 +2103,140 @@
       </p>
     </footer>
     <!-- FOOTER-END -->
+
+     <!-- ===================== FILTER MODAL START ============================ -->
+    
+    <div class="modal fade filterModal pe-0 show"  id="createChannelModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display:block;"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.83415 11.8329L0.66748 10.6663L5.33415 5.99959L0.66748 1.33293L1.83415 0.16626L6.50081 4.83293L11.1675 
+                0.16626L12.3341 1.33293L7.66748 5.99959L12.3341 10.6663L11.1675 11.8329L6.50081 7.16626L1.83415 11.8329Z" fill="#718096"/>
+              </svg>
+                                
+            </button>
+          </div>
+    
+          <div class="modal-body p-0">
+            <div class="step-container">
+              <!-- form 1 -->
+              <div class="form1" id="form1">
+
+                <div class="inputbox">
+                  <label for="channelname" class="inputlabel"> Channel Name </label>
+                  <input type="text" id="channelname" class="inputfield" placeholder="Mega Bangla Tv" autocomplete="off">
+                </div>
+
+                <div class="inputbox">
+                  <label for="description" class="inputlabel"> Description</label>
+                  <textarea id="description" class="textareafield" placeholder="Enter Description"></textarea>
+                </div>
+
+                <div class="keywordbox">
+                  <p class="keyword-title">Keywords</p>
+                  <div class="border-shadow">
+                    <div class="keywords">
+
+                      <button class="keywordbtn">
+                        <span class="keywordbtn-text">Shariah</span>
+                        <span class="keywordbtn-icon">
+
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                            4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                            5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                          </svg>
+                            
+                        </span>
+                      </button>
+                      <button class="keywordbtn">
+                        <span class="keywordbtn-text">Salat</span>
+                        <span class="keywordbtn-icon">
+
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                            4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                            5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                          </svg>
+                            
+                        </span>
+                      </button>
+                      <button class="keywordbtn">
+                        <span class="keywordbtn-text">নামাজ</span>
+                        <span class="keywordbtn-icon">
+
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                            4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                            5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                          </svg>
+                            
+                        </span>
+                      </button>
+                      <button class="keywordbtn">
+                        <span class="keywordbtn-text">অজু</span>
+                        <span class="keywordbtn-icon">
+
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                            4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                            5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                          </svg>
+                            
+                        </span>
+                      </button>
+                      <button class="keywordbtn">
+                        <span class="keywordbtn-text">ইসলাম</span>
+                        <span class="keywordbtn-icon">
+
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                            4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                            5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                          </svg>
+                            
+                        </span>
+                      </button>
+                      <button class="keywordbtn">
+                        <span class="keywordbtn-text">মাহফিল</span>
+                        <span class="keywordbtn-icon">
+
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.73366 9.08329L0.916992 8.26663L4.18366 4.99996L0.916992 1.73329L1.73366 0.916626L5.00033 
+                            4.18329L8.26699 0.916626L9.08366 1.73329L5.81699 4.99996L9.08366 8.26663L8.26699 9.08329L5.00033 
+                            5.81663L1.73366 9.08329Z" fill="#718096"></path>
+                          </svg>
+                            
+                        </span>
+                      </button>
+
+                    </div>
+                  </div>
+                  <div class="btn-wrapper">
+                    <button class="btn-next">
+                      <span>Next</span>
+                      <span>
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z" fill="white"/>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+           
+              <!-- form 2 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- ===================== FILTER MODAL END ============================ -->
 
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>

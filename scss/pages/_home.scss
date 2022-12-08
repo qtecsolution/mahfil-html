@@ -65,6 +65,7 @@
 .recent-subscriber {
     background-color:$white;
     padding:size(14);
+    @include radius(5);
     &-content {
         @include flex-column;
         gap: size(20);
@@ -152,6 +153,86 @@
         }
         &-body {
 
+        }
+    }
+
+   
+}
+
+.videoshome {
+    margin: size(14) size(0);
+    &-content {
+        @include flex-column;
+        gap: size(24);
+        background: $white;
+        padding: size(14) size(14);
+        @include radius(6);
+       
+    }
+    &-header {
+        @include flex-center-between;
+        .videos-title {
+            color: $gray-800;
+            @include font($primaryFont,18,bold,normal,24);
+            @include breakpoint (desktop1200){
+                @include font($primaryFont,20,bold,normal,24);
+            }
+        }
+    }
+    &-body {
+        @include flex-column;
+        gap: size(24);
+        .video-des {
+            @include flex-center-between;
+            padding: size(10) size(30);
+            color: $gray-700;
+            @include border(solid,1,$gray-300);    
+            @include radius(10);
+            min-height: size(60);
+            @include font($primaryFont,16,semibold,normal,20);
+          
+        }
+
+        .videolist {
+            @include list-vertical;
+            gap: size(12);
+            &-item {
+            @include border(solid,1,$gray-300);    
+            @include radius(10);
+            .single-video {
+                @include flex-between;
+                padding: size(10) size(30);
+                color: $gray-600;
+                @include transitionsbackground;
+                @include hover {
+                    background-color: #f8f9fa;
+                }
+                .video-info {
+                    @include flex-center-vert;
+                    gap: size(10);
+                    .thumb-image {
+                        width: size(82);
+                        height: size(46);
+                        overflow: hidden;
+                        @include radius (4);
+                        img {
+                            @include wh100;
+                            object-fit: contain;
+                        }
+                    }
+                    .video-name {
+                        @include font($primaryFont,14,medium,normal,20);
+                        flex: 1;
+                        @include line-clamp;
+                    }
+                    .video-length {
+        
+                    }
+                }
+        
+            }
+                
+            }
         }
     }
 }

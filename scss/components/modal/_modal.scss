@@ -4,19 +4,24 @@
 .modal {
   &-content {
     @include radius(8);
+    border: none;
+    border: 1px solid crimson;
   }
 
   &-header {
     border-bottom: 0;
+   
 
     .btn-close {
       @include square(24);
       @include flex-center;
       overflow: hidden;
       opacity: 1;
+      @include border(solid,1,$gray-300);
+      @include circle;
 
       svg {
-        @include wh100;
+       @include square(14);
         @include transitiontransform;
       }
 
@@ -28,6 +33,93 @@
             // stroke: $danger;
           }
         }
+      }
+    }
+
+  }
+
+  &-body {
+    margin-bottom: size(60);
+    .step-container {
+      @include w100;
+      @include breakpoint(mobile768) {
+        width: size(445);
+        margin: auto
+      }
+      .form1 {
+        @include flex-column;
+          gap: size(16); 
+          
+          .inputbox {
+            @include flex-column;
+            gap: size(8);
+
+            .inputlabel {
+              color: $gray-600;
+              @include font($primaryFont, 14, medium, normal, 17);
+            }
+
+            .inputfield , .textareafield {
+              @include setBgColor($white, $gray-900);
+              @include border(solid, 1, $gray-300);
+              
+              @include font($primaryFont, 14, medium, normal, 17);
+              padding: size(13.5) size(16);
+              @include transitionsall;
+          
+
+              &::placeholder {
+                color: $textPlaceholder;
+              }
+
+              &:focus {
+                border-color: $primary;
+              }
+            }
+            .textareafield {
+              height: size(218);
+            }
+          }
+
+          .keywordbox {
+            @include flex-column;
+            gap: size(10);
+            .border-shadow {
+              @include border(solid,1,$gray-400);
+             
+            }
+            .keywords {
+             
+              padding: size(16) ;
+              padding-bottom: size(36);
+              
+            }
+            .keyword-title {
+              color: $gray-600;
+              @include font($primaryFont, 14, medium, normal, 17);
+            }
+
+            .keywords {
+              @include flex;
+              gap: size(8);
+              flex-wrap: wrap;
+            }
+
+
+          } 
+
+          .btn-wrapper {
+            width: size(180);
+            margin-left: auto;
+            padding-top: size(22);
+            .btn-next {
+              padding-inline: 0;
+              font-size: size(14);
+            }
+            
+            
+          }
+
       }
     }
   }

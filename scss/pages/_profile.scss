@@ -87,6 +87,7 @@
       padding: size(32) size(20);
       @include flex-column;
       gap: size(40);
+    
 
       @include breakpoint(tab992) {
         width: calc(100% - size(238));
@@ -142,6 +143,7 @@
 
       &-body {
         @include flex-center;
+    
         .profileform {
           @include flex-column;
           gap: size(16);

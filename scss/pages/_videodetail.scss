@@ -42,6 +42,7 @@
                     .link-text {
                         @include flex;
                         gap: size(26);
+                        align-items: flex-end;
                         .text {
                             color: $gray-700;
                             @include font($primaryFont,16,medium,normal,24);

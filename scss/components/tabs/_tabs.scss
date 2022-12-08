@@ -120,5 +120,18 @@
         }
     
     }
+
+    .graph {
+        @include h100;
+        padding: size(16); 
+        figure {
+            @include wh100;
+            overflow: hidden;
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+    }
 }
 

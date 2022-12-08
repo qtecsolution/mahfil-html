@@ -93,6 +93,25 @@ button,
   }
 }
 
+.btn-next {
+  @include setBgColor($primary, $white);
+  @include w100;
+  @include font($primaryFont, 18, normal, normal, 18);
+  display: inline-block;
+  padding: size(14) size(0) ;
+  text-align: center;
+  @include flex-center;
+  gap: size(12);
+  @include transitionsbackground;
+  @include breakpoint(tab992) {
+    gap: size(24);
+  }
+
+  @include hover {
+    background: $primary-dark;
+  }
+}
+
 
 .keywordbtn {
   @include setBgColor($gray-200,$gray-600);

@@ -11,13 +11,14 @@
     
         }
         &-link {
-            @include square(30);
+            @include square(34);
             display: inline-block;
          
             @include flex-center;
             gap: size(2);
             @include setBgColor($white,$gray-600);
             @include transitionscolor;
+            @include transitionsall;
             .round {
                 @include square(4);
     

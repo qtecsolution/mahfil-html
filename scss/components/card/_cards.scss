@@ -37,8 +37,7 @@
            align-items: center;
            .comment-image {
                @include square (30);
-               @include circle;
-              
+               @include circle;      
                img {
                    @include wh100;
                    @include circle;
@@ -59,6 +58,7 @@
            .comment-text{
                color: $gray-800;
                @include font($primaryFont,14,normal,normal,20);
+               @include line-clamp-3;
            }
        }
    }
