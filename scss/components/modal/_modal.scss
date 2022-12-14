@@ -79,6 +79,7 @@
                 border-color: $primary;
               }
             }
+
             .textareafield {
               height: size(218);
             }
@@ -93,7 +94,8 @@
             }
       
             &.errorfield {
-              .inputfield {
+              .inputfield,
+              .textareafield {
                 border-color: $danger !important;
               }
               
