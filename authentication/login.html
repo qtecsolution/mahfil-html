@@ -34,7 +34,7 @@
               </div>
 
               <div class="authenticationform-body">
-                <div class="inputbox">
+                <div class="inputbox errorfield">
                   <label for="logmail" class="inputlabel"> Email </label>
                   <input
                     type="email"
@@ -43,6 +43,9 @@
                     placeholder="Enter email address"
                     autocomplete="off"
                   />
+                  <div class="error">
+                    <p class="error-message">Email is required</p>
+                  </div>
                 </div>
 
                 <div class="info">
@@ -57,6 +60,9 @@
                       placeholder="Enter password"
                       autocomplete="off"
                     />
+                    <div class="error">
+                      <p class="error-message">Password is required</p>
+                    </div>
                   </div>
 
                   <div class="forgotlink">

@@ -207,7 +207,8 @@
                     class="searchfield"
                     autocomplete="off"
                     placeholder="What are you looking for?"
-                  />
+                  /> 
+                  
                 </div>
 
                 <div class="mobilesuggestion">
@@ -1272,7 +1273,7 @@
             <div class="profilecontent">
               <div class="changepassword">
                 <form class="changeform">
-                  <div class="inputbox">
+                  <div class="inputbox errorfield">
                     <label for="oldpassword" class="inputlabel">
                       Old Password
                     </label>
@@ -1283,7 +1284,10 @@
                       class="inputfield"
                       placeholder="Enter old password"
                       autocomplete="off"
-                    />
+                    /> 
+                    <div class="error">
+                      <p class="error-message">Old password is required</p>
+                    </div>
                   </div>
 
                   <div class="inputbox">
@@ -1298,6 +1302,10 @@
                       placeholder="Enter new password"
                       autocomplete="off"
                     />
+
+                    <div class="error">
+                      <p class="error-message">New password is required</p>
+                    </div>
                   </div>
 
                   <div class="inputbox">
@@ -1312,6 +1320,9 @@
                       placeholder="Confirm new password"
                       autocomplete="off"
                     />
+                    <div class="error">
+                      <p class="error-message">Passwords do not match</p>
+                    </div>
                   </div>
 
                   <div class="submitbox">

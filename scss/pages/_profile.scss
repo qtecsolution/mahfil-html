@@ -178,6 +178,26 @@
                 border-color: $primary;
               }
             }
+
+            
+            .error {
+              display: none;
+      
+              .error-message {
+                color: $danger;
+                @include font($primaryFont, 13, medium, normal, 17);
+              }
+            }
+      
+            &.errorfield {
+              .inputfield {
+                border-color: $danger;
+              }
+              
+              .error {
+                display: block;
+              }
+            }
           }
 
           .submitbox {
@@ -323,6 +343,25 @@
             .textareafield {
               height: size(218);
             }
+
+            .error {
+              display: none;
+      
+              .error-message {
+                color: $danger;
+                @include font($primaryFont, 13, medium, normal, 17);
+              }
+            }
+      
+            &.errorfield {
+              .inputfield {
+                border-color: $danger;
+              }
+              
+              .error {
+                display: block;
+              }
+            }
           }
 
           .keywordbox {
@@ -414,6 +453,25 @@
               &:focus {
                 border-color: $primary;
               }
+            } 
+            
+            .error {
+              display: none;
+      
+              .error-message {
+                color: $danger;
+                @include font($primaryFont, 13, medium, normal, 17);
+              }
+            }
+      
+            &.errorfield {
+              .inputfield {
+                border-color: $danger ;
+              }
+              
+              .error {
+                display: block;
+              }
             }
           }
 
@@ -502,6 +560,26 @@
           }
           .textareafield {
             height: size(218);
+          } 
+
+          
+          .error {
+            display: none;
+    
+            .error-message {
+              color: $danger;
+              @include font($primaryFont, 13, medium, normal, 17);
+            }
+          }
+    
+          &.errorfield {
+            .inputfield {
+              border-color: $danger;
+            }
+            
+            .error {
+              display: block;
+            }
           }
         }
         .btn-wrapper {

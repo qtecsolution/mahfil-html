@@ -107,6 +107,26 @@
           border-color: $primary;
         }
       }
+
+      
+      .error {
+        display: none;
+
+        .error-message {
+          color: $danger;
+          @include font($primaryFont, 13, medium, normal, 17);
+        }
+      }
+
+      &.errorfield {
+        .inputfield {
+          border-color: $danger;
+        }
+        
+        .error {
+          display: block;
+        }
+      }
     }
   }
 

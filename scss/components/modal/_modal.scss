@@ -82,6 +82,25 @@
             .textareafield {
               height: size(218);
             }
+
+            .error {
+              display: none;
+      
+              .error-message {
+                color: $danger;
+                @include font($primaryFont, 13, medium, normal, 17);
+              }
+            }
+      
+            &.errorfield {
+              .inputfield {
+                border-color: $danger !important;
+              }
+              
+              .error {
+                display: block;
+              }
+            }
           }
 
           .keywordbox {

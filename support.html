@@ -1244,17 +1244,26 @@
 
                 <div class="supportform-header">
                  
-                  <div class="inputbox">
+                  <div class="inputbox errorfield">
                     <label for="supportname" class="inputlabel"> Name </label>
                     <input type="text" id="supportname" class="inputfield" placeholder="write your name" autocomplete="off">
+                    <div class="error">
+                      <p class="error-message">Name is required</p>
+                    </div>
                   </div>
-                  <div class="inputbox">
+                  <div class="inputbox ">
                     <label for="supportemail" class="inputlabel"> Mail</label>
                     <input type="email" id="supportemail" class="inputfield" placeholder="sayed123@gmail.com" autocomplete="off">
+                    <div class="error">
+                      <p class="error-message">Email is required</p>
+                    </div>
                   </div>
-                  <div class="inputbox">
+                  <div class="inputbox ">
                     <label for="supportsubject" class="inputlabel"> Subject</label>
                     <input type="text" id="supportsubject" class="inputfield" placeholder="subject" autocomplete="off">
+                    <div class="error">
+                      <p class="error-message">Subject is required</p>
+                    </div>
                   </div>
                   <div class="inputbox">
                     <label for="message" class="inputlabel"> Write your message here</label>

@@ -1321,7 +1321,7 @@
 
               <div class="profilecontent-body">
                 <form class="profileform">
-                  <div class="inputbox">
+                  <div class="inputbox errorfield">
                     <label for="profilemail" class="inputlabel"> Email </label>
                     <input
                       type="email"
@@ -1330,6 +1330,9 @@
                       placeholder="sayed123@gmail.com"
                       autocomplete="off"
                     />
+                    <div class="error">
+                      <p class="error-message">Email is required</p>
+                    </div>
                   </div>
 
                   <div class="inputbox">
@@ -1342,7 +1345,10 @@
                       class="inputfield"
                       placeholder="+8801241231231"
                       autocomplete="off"
-                    />
+                    /> 
+                    <div class="error">
+                      <p class="error-message">Phone number is required</p>
+                    </div>
                   </div>
 
                   <div class="submitbox">
