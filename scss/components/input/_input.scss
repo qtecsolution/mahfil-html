@@ -86,3 +86,20 @@
     }
   }
 
+
+  .inputbox.show__hide-pass {
+    position: relative;
+     input {
+      padding-right: size(30) !important;
+     }
+
+    .eye-icon ,
+    .eye__shash-icon{
+      position: absolute;
+      right: size(10);
+      top: size(40);
+       cursor: pointer;
+    }
+    
+
+  }
