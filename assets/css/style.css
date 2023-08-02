@@ -3224,12 +3224,14 @@ table.videotable tr td .dropdown .dropdown-toggle::after {
   background: url(../images/welcome.png) no-repeat center center/cover;
   margin: 1.25rem 0rem;
   min-height: 6.5625rem;
+  display: flex;
+  align-items: center;
   width: 100%;
   border-radius: 0.3125rem;
   overflow: hidden;
 }
 .welcome-info {
-  padding: 1rem 1.5rem;
+  padding: 0rem 1.5rem;
 }
 .welcome-title {
   color: hsl(0, 0%, 100%);
