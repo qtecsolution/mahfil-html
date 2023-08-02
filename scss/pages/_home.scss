@@ -4,28 +4,31 @@
 /**======= HOME-BANNER =======**/
 
 .welcome {
-    background: url(https://qtecsolution.github.io/mahfil_dashboard_html/assets/images/welcome.png) no-repeat;
+    background: url(../images/welcome.png) no-repeat center center/cover;
     margin: size(20) size(0);
     min-height: size(105);
     @include w100;
-    padding: size(30) size(10);
-    background-size:cover;
     @include radius(5);
-    @include breakpoint(tab992) {
-    background-position: center;
+    overflow: hidden;
 
+    &-info {
+        padding: size(16) size(24);
     }
+    
     &-title {
         color: $white;
         @include font($primaryFont,18,semibold,normal,24);
+
         @include breakpoint (tab992){
             @include font($primaryFont,20,semibold,normal,24);
         }
     }
+
     &-text {
         color: $gray-400;
         @include font($primaryFont,14,medium,normal,20);
-        padding-top: size(10);
+        margin-top: size(8);
+
         @include breakpoint (tab992){
             @include font($primaryFont,16,medium,normal,20);
         }
@@ -148,15 +151,7 @@
                 }
             }
         }
-        &-header {
-
-        }
-        &-body {
-
-        }
     }
-
-   
 }
 
 .videoshome {
@@ -225,11 +220,7 @@
                         flex: 1;
                         @include line-clamp;
                     }
-                    .video-length {
-        
-                    }
                 }
-        
             }
                 
             }

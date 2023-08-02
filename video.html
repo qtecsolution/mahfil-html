@@ -16,12 +16,12 @@
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/back-top/back.css" />
     <!-- MAHFIL CSS -->
-    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <!-- HEADER SECTION START -->
     <header class="header sticky-top">
-      <nav class="header-nav">
+      <nav id="header-nav" class="header-nav" aria-labelledby="header-nav">
         <!-- CHANNEL DROPDOWN START -->
         <div class="channeldropdown">
           <div class="dropdowninfo">
@@ -374,7 +374,7 @@
                 <span class="text">Go Live</span>
               </button>
 
-              <button type="button" class="btn-upload">
+              <a href="insartpublish.html" class="btn-upload">
                 <span class="icon">
                   <svg
                     width="24"
@@ -406,7 +406,7 @@
                   </svg>
                 </span>
                 <span class="text">Upload Video</span>
-              </button>
+              </a>
             </div>
 
             <div class="userinfo">
@@ -1229,7 +1229,7 @@
               
               <div class="videos-body ">
                 <div class="videos-lists table-responsive">
-                  <table class="table  videotable">
+                  <table id="videotable" class="table videotable" aria-describedby="videotable">
                     <thead>
                       <tr>
                           <th>

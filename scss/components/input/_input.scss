@@ -1,5 +1,120 @@
 @use '../../global' as *;
 @use '../../partials' as *;
+
+
+.forminput {
+  @include flex-column;
+  gap: size(10);
+
+  .inputlabel {
+    @include flex-center-vert;
+    gap: size(4);
+
+    .text {
+      color: $text-secondary;
+      font-size: size(13);
+    }
+
+    .icon {
+      @include square(14);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+
+  .inputfield {
+    @include setBgColor($white, $gray-900);
+    @include border(solid, 1, $border-default);
+    @include radius(4);
+    font-size: size(14);
+    padding: size(12.5) size(16);
+    @include transitionsall;
+
+    &::placeholder {
+      color: $text-quaternary;
+    }
+
+    &:focus {
+      border-color: $gray-600;
+    }
+  }
+}
+
+.nice-select {
+  border-color: $border-default;
+  height: size(44);
+  color: $text-secondary;
+  font-size: size(14);
+  line-height: size(44);
+
+  .current {
+    color: $gray-900;
+  }
+}
+
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: $gray-600;
+}
+
+.uploadvideobox {
+  background: $nutral-gray;
+  @include radius(8);
+  @include flex-center-column;
+  gap: size(20);
+  height: size(260);
+  padding: size(24) size(16);
+  text-align: center;
+
+  .icon {
+    @include square(48);
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .text {
+    color: $text-tertiary;
+    font-size: size(13);
+  }
+
+  .videolabel {
+    @include flex-center;
+    gap: size(4);
+    width: size(160);
+    height: size(48);
+    padding: size(8) size(12);
+    background: $white;
+    box-shadow: $btnshadow;
+    @include border(solid, 1, $border-default);
+    cursor: pointer;
+
+    .icon {
+      @include square(12);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .text {
+      color: $text-primary;
+      font-size: size(12);
+      font-style: normal;
+      font-weight: 500;
+    }
+  }
+}
+
 .inputbox {
     @include flex-column;
     gap: size(8);
@@ -46,60 +161,58 @@
         display: block;
       }
     }
-  }
+}
 
-
-  .replybox {
-  padding-right: size(20);
-  margin-top: size(20);
-  margin: size(20) size(40);
-    &-body{
-      
-      .replyinput {
-        @include w100;
-       @include border(solid,1,$gray-300);
-       background: transparent;
-       padding: size(8);
-       @include font($primaryFont, 14, medium, normal, 17);
-       &::placeholder {
-        color: $textPlaceholder;
-      }
-
-      &:focus {
-        border-color: $primary;
-      }
-      }
-    }
-
-    &-footer {
-      @include flex-end;
-      padding: size(4) size(0);
-      gap: size(24);
-      .cancel {
-        color: $gray-500;
-        @include font($primaryFont, 14, medium, normal, 17);
-      }
-      .reply {
-        color: $gray-700;
-        @include font($primaryFont, 14, medium, normal, 17);
-      }
-    }
-  }
-
-
-  .inputbox.show__hide-pass {
-    position: relative;
-     input {
-      padding-right: size(30) !important;
-     }
-
-    .eye-icon ,
-    .eye__shash-icon{
-      position: absolute;
-      right: size(10);
-      top: size(40);
-       cursor: pointer;
-    }
+.replybox {
+padding-right: size(20);
+margin-top: size(20);
+margin: size(20) size(40);
+  &-body{
     
+    .replyinput {
+      @include w100;
+      @include border(solid,1,$gray-300);
+      background: transparent;
+      padding: size(8);
+      @include font($primaryFont, 14, medium, normal, 17);
+      &::placeholder {
+      color: $textPlaceholder;
+    }
 
+    &:focus {
+      border-color: $primary;
+    }
+    }
   }
+
+  &-footer {
+    @include flex-end;
+    padding: size(4) size(0);
+    gap: size(24);
+    .cancel {
+      color: $gray-500;
+      @include font($primaryFont, 14, medium, normal, 17);
+    }
+    .reply {
+      color: $gray-700;
+      @include font($primaryFont, 14, medium, normal, 17);
+    }
+  }
+}
+
+.inputbox.show__hide-pass {
+  position: relative;
+    input {
+    padding-right: size(30) !important;
+    }
+
+  .eye-icon ,
+  .eye__shash-icon{
+    position: absolute;
+    right: size(10);
+    top: size(40);
+      cursor: pointer;
+  }
+  
+
+}

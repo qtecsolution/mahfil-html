@@ -6,7 +6,6 @@ button,
 [type="reset"],
 [type="submit"] {
   cursor: pointer;
-  border: none;
   @include transparent-button;
   opacity: 1;
   margin: 0;
@@ -144,11 +143,7 @@ button,
   }
 }
 
-.tabbtn {
-  .tab-text {
-    
-  }
-}
+
 .delete-btn,
 .download-btn {
   padding: size(7) size(14);

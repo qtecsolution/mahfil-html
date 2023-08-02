@@ -16,12 +16,12 @@
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/back-top/back.css" />
     <!-- MAHFIL CSS -->
-    <link rel="stylesheet" href="assets/css/style.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <!-- HEADER SECTION START -->
     <header class="header sticky-top">
-      <nav class="header-nav">
+      <nav id="header-nav" class="header-nav" aria-labelledby="header-nav">
         <!-- CHANNEL DROPDOWN START -->
         <div class="channeldropdown">
           <div class="dropdowninfo">
@@ -374,7 +374,7 @@
                 <span class="text">Go Live</span>
               </button>
 
-              <button type="button" class="btn-upload">
+              <a href="insartpublish.html" class="btn-upload">
                 <span class="icon">
                   <svg
                     width="24"
@@ -406,7 +406,7 @@
                   </svg>
                 </span>
                 <span class="text">Upload Video</span>
-              </button>
+              </a>
             </div>
 
             <div class="userinfo">
@@ -1214,7 +1214,7 @@
               
               <div class="comments-body ">
                 <div class="comments-lists table-responsive">
-                  <table class="table  comments-table">
+                  <table id="comments-table" class="table comments-table" aria-describedby="comments-table">
                     <thead>
                       <tr>
                           <th>
@@ -1373,7 +1373,7 @@
                             
                               <!-- collapsed all comment  -->
                               <div class="collapse" id="collapseExample2">
-                                <table class="table  comments-table py-5">
+                                <table id="mycommentstable" class="table  comments-table py-5" aria-describedby="mycommentstable">
                                   <tr>
                                     <td>
                                       <div class="customcheck">
@@ -1397,7 +1397,6 @@
                                       </div>
                                     </td>
                                     <td>2 April, 2022</td>
-                                  
                           
                                     <td>
                                       <div class=" dropdown">
@@ -1778,7 +1777,7 @@
                             
                               <!-- collapsed all comment  -->
                               <div class="collapse" id="collapseExample6">
-                                <table class="table  comments-table py-5">
+                                <table id="commentstable" class="table comments-table py-5" aria-describedby="commentstable">
                                   <tr>
                                     <td>
                                       <div class="customcheck">
@@ -1803,7 +1802,6 @@
                                     </td>
                                     <td>2 April, 2022</td>
                                   
-                          
                                     <td>
                                       <div class=" dropdown">
                                         <span data-bs-toggle="dropdown" class="dropdown-toggle">

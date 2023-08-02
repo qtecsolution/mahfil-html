@@ -26,7 +26,6 @@
 
 // DEFINE BORDER-RADIUS-ALL MIXIN
 @mixin radius($radius) {
-	border-radius: size($radius);
 	-webkit-border-radius: size($radius);
 	-moz-border-radius: size($radius);
 	-ms-border-radius: size($radius);

@@ -1,0 +1,137 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.publishform {
+  .leftinfo {
+    background: $white;
+    padding: size(20);
+    @include radius(10);
+    @include flex-column;
+    gap: size(20);
+
+    &-header {
+      @include flex-column;
+      gap: size(4);
+
+      .leftinfotitle {
+        color: $text-primary;
+        font-size: size(16);
+        font-weight: 600;
+      }
+
+      .leftinfotext {
+        color: $text-secondary;
+        font-size: size(13);
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(20);
+    }
+
+    &-footer {
+      @include flex-column;
+      gap: size(20);
+
+      .footerinfo {
+        @include flex-column;
+        gap: size(4);
+  
+        .title {
+          color: $text-primary;
+          font-size: size(16);
+          font-weight: 600;
+        }
+  
+        .text {
+          color: $text-secondary;
+          font-size: size(13);
+        }
+      }
+    }
+  }
+
+  .rightinfo {
+    background: $white;
+    padding: size(20);
+    @include radius(10);
+    @include flex-column;
+    gap: size(20);
+
+    &-header {
+      @include flex-column;
+      gap: size(4);
+
+      .title {
+        color: $text-primary;
+        font-size: size(16);
+        font-weight: 600;
+      }
+
+      .text {
+        color: $text-secondary;
+        font-size: size(13);
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(20);
+
+      .info {
+        @include flex-column;
+        gap: size(4);
+  
+        .title {
+          color: $text-primary;
+          font-size: size(16);
+          font-weight: 600;
+        }
+  
+        .text {
+          color: $text-secondary;
+          font-size: size(13);
+        }
+      }
+    }
+
+    &-footer {
+      @include flex-column;
+      gap: size(20);
+
+      .footerinfo {
+        @include flex-column;
+        gap: size(4);
+  
+        .title {
+          color: $text-primary;
+          font-size: size(16);
+          font-weight: 600;
+        }
+  
+        .text {
+          color: $text-secondary;
+          font-size: size(13);
+        }
+      }
+
+      .submitbox {
+        @include flex-end;
+        padding: size(12) size(16);
+        background: $bg-fill;
+
+        .btn-publish {
+          @include setBgColor($blue-600, $white);
+          @include radius(4);
+          @include flex-center;
+          font-size: size(14);
+          font-style: normal;
+          font-weight: 500;
+          padding: size(11.5) size(24);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
