@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css" />
     <!-- BACK-TOP CSS -->
     <link rel="stylesheet" href="assets/css/back-top/back.css" />
+    <!-- MATERIAL-ICON (CDN) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- flatpickr CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
     <!-- BOOTSTRAP CSS -->
@@ -1416,11 +1418,13 @@
 
                     <div class="row g-4">
                       <div class="col-lg-6">
-                        <input class="calendar inputfield" placeholder="Select Date">
+                        <input class="calendar inputfield w-100" placeholder="Select Date">
                       </div>
 
                       <div class="col-lg-6">
-                        <input type="time" class="inputfield w-100">
+                        <div class="mobile w-100">
+                          <input type="test" class="timepicker-ui-input inputfield w-100" value="12:00 AM" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1463,6 +1467,17 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
     <script>
       flatpickr('.calendar')
+    </script>
+
+    <!-- TIME-PICKER (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker-ui/2.3.0/timepicker-ui.umd.js"></script>
+  
+    <script>
+      const mobile = document.querySelector('.mobile');
+      const mobileTimepicker = new window.tui.TimepickerUI(mobile,{
+        mobile: true
+      });
+      mobileTimepicker.create();
     </script>
   </body>
 </html>
