@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css" />
     <!-- BACK-TOP CSS -->
     <link rel="stylesheet" href="assets/css/back-top/back.css" />
-    <!-- flatpickr CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+    <!-- FLATPICKR-CSS -->
+    <link rel="stylesheet" href="assets/css/flatpickr/flatpickr.min.css">
+    <!-- JQUERY-TIMEPICKER -->
+    <link rel="stylesheet" href="assets/css/timepicker/jquery.timepicker.min.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
     <!-- MAHFIL CSS -->
@@ -1123,7 +1125,7 @@
                       </span>
                     </label>
 
-                    <textarea class="inputfield" name="description-editor" autocomplete="off"></textarea>
+                    <textarea class="inputfield" name="description-editor2" autocomplete="off"></textarea>
                   </div>
                 </div>
 
@@ -1282,7 +1284,7 @@
                       </div>
 
                       <div class="col-lg-6">
-                        <input type="time" class="inputfield w-100">
+                        <input type="text" class="timepicker inputfield w-100" placeholder="Select Time">
                       </div>
                     </div>
                   </div>
@@ -1314,14 +1316,19 @@
     <!--  NICE-SELECT-2-->
     <script src="assets/js/nice-select/nice-select2.js"></script>
     <script src="assets/js/nice-select/insartpublish.js"></script>
-    <!-- CK-EDITOR (CDN) -->
+    <!-- CKEDITOR-JS (CDN) -->
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
-      CKEDITOR.replace('description-editor');
+      CKEDITOR.replace('description-editor2');
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+    <!-- FLATPICKR-JS -->
+    <script src="assets/js/flatpickr/flatpickr.min.js"></script>
     <script>
       flatpickr('.calendar')
     </script>
+    <!-- JQUERY -->
+    <script src="assets/js/jquery/query.min.js"></script>
+    <script src="assets/js/timepicker/jquery.timepicker.min.js"></script>
+    <script src="assets/js/timepicker/timepicker.js"></script>
   </body>
 </html>

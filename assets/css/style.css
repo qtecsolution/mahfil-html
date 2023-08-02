@@ -4775,3 +4775,18 @@ table.videotable tr td .dropdown .dropdown-toggle::after {
   padding: 0.71875rem 1.5rem;
   text-align: center;
 }
+
+.ui-menu-item {
+  cursor: pointer;
+}
+
+.ui-timepicker-standard a {
+  color: hsl(223, 4%, 37%);
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none !important;
+  background: none !important;
+}
+.ui-timepicker-standard a:not([disabled]):hover {
+  color: hsl(0, 0%, 17%);
+}
