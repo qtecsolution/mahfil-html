@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="assets/css/back-top/back.css" />
     <!-- FLATPICKR-CSS -->
     <link rel="stylesheet" href="assets/css/flatpickr/flatpickr.min.css">
-    <!-- JQUERY-TIMEPICKER -->
-    <link rel="stylesheet" href="assets/css/timepicker/jquery.timepicker.min.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
     <!-- MAHFIL CSS -->
@@ -1284,7 +1282,9 @@
                       </div>
 
                       <div class="col-lg-6">
-                        <input type="text" class="timepicker inputfield w-100" placeholder="Select Time">
+                        <div class="position-relative w-100 mytimepicker">
+                          <input type="text" class="time-pickable inputfield w-100" placeholder="Select Time">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1326,9 +1326,6 @@
     <script>
       flatpickr('.calendar')
     </script>
-    <!-- JQUERY -->
-    <script src="assets/js/jquery/query.min.js"></script>
-    <script src="assets/js/timepicker/jquery.timepicker.min.js"></script>
     <script src="assets/js/timepicker/timepicker.js"></script>
   </body>
 </html>
