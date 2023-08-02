@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="assets/css/back-top/back.css" />
     <!-- flatpickr CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
-    <!-- MATERIAL-ICON (CDN) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
     <!-- MAHFIL CSS -->
@@ -151,85 +149,6 @@
 
         <!-- MOBILE-MENU START -->
         <ul class="mobilemenu">
-          <li class="mobilemenu-item searchitem">
-            <button type="button" class="mobilemenu-link search">
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#searchmobileicon)">
-                  <path
-                    d="M13.4172 11.6667H12.7588L12.5255 11.4417C13.3422 10.4917 13.8338 9.25833 13.8338 7.91667C13.8338 4.925 11.4088 2.5 8.41715 2.5C5.42549 2.5 3.00049 4.925 3.00049 7.91667C3.00049 10.9083 5.42549 13.3333 8.41715 13.3333C9.75882 13.3333 10.9922 12.8417 11.9422 12.025L12.1672 12.2583V12.9167L16.3338 17.075L17.5755 15.8333L13.4172 11.6667ZM8.41715 11.6667C6.34215 11.6667 4.66715 9.99167 4.66715 7.91667C4.66715 5.84167 6.34215 4.16667 8.41715 4.16667C10.4922 4.16667 12.1672 5.84167 12.1672 7.91667C12.1672 9.99167 10.4922 11.6667 8.41715 11.6667Z"
-                    fill="#C2CFE0"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="searchmobileicon">
-                    <rect
-                      width="20"
-                      height="20"
-                      fill="white"
-                      transform="translate(0.500488)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-
-            <div class="searchdropdown">
-              <div class="searchbox">
-                <button class="btn-search">
-                  <svg
-                    width="21"
-                    height="20"
-                    viewBox="0 0 21 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#dashsearchicon)">
-                      <path
-                        d="M13.4172 11.6667H12.7588L12.5255 11.4417C13.3422 10.4917 13.8338 9.25833 13.8338 7.91667C13.8338 4.925 11.4088 2.5 8.41715 2.5C5.42549 2.5 3.00049 4.925 3.00049 7.91667C3.00049 10.9083 5.42549 13.3333 8.41715 13.3333C9.75882 13.3333 10.9922 12.8417 11.9422 12.025L12.1672 12.2583V12.9167L16.3338 17.075L17.5755 15.8333L13.4172 11.6667ZM8.41715 11.6667C6.34215 11.6667 4.66715 9.99167 4.66715 7.91667C4.66715 5.84167 6.34215 4.16667 8.41715 4.16667C10.4922 4.16667 12.1672 5.84167 12.1672 7.91667C12.1672 9.99167 10.4922 11.6667 8.41715 11.6667Z"
-                        fill="#C2CFE0"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="dashsearchicon">
-                        <rect
-                          width="20"
-                          height="20"
-                          fill="white"
-                          transform="translate(0.500488)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </button>
-                <div class="searchinput">
-                  <input
-                    type="search"
-                    id="mobilesearch-field"
-                    class="searchfield"
-                    autocomplete="off"
-                    placeholder="What are you looking for?"
-                  />
-                </div>
-
-                <div class="mobilesuggestion">
-                  <ul class="suggestionlist">
-                    <li class="suggestionlist-item">Search Item One</li>
-                    <li class="suggestionlist-item">Search Item Two</li>
-                    <li class="suggestionlist-item">Search Item Three</li>
-                    <li class="suggestionlist-item">Search Item Four</li>
-                    <li class="suggestionlist-item">Search Item Five</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-
           <li class="mobilemenu-item">
             <button
               type="button"
@@ -259,13 +178,7 @@
           </li>
 
           <li class="mobilemenu-item">
-            <button
-              type="button"
-              class="mobilemenu-link upload"
-              data-bs-toggle="tooltip"
-              data-bs-placement="bottom"
-              data-bs-title="Upload Video"
-            >
+            <a href="insartpublish.html" class="mobilemenu-link upload" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Upload Video">
               <svg
                 width="24"
                 height="24"
@@ -291,66 +204,13 @@
                   />
                 </g>
               </svg>
-            </button>
+            </a>
           </li>
         </ul>
         <!-- MOBILE-MENU END -->
 
         <!-- DESKTOP-MENU START -->
-        <div class="desktopmenu">
-          <div class="desktopsearch">
-            <div class="searchbox">
-              <button type="button" class="btn-search">
-                <svg
-                  width="21"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#desksearchicon)">
-                    <path
-                      d="M13.5461 11.6667H12.8877L12.6544 11.4417C13.4711 10.4917 13.9627 9.25833 13.9627 7.91667C13.9627 4.925 11.5377 2.5 8.54606 2.5C5.55439 2.5 3.12939 4.925 3.12939 7.91667C3.12939 10.9083 5.55439 13.3333 8.54606 13.3333C9.88773 13.3333 11.1211 12.8417 12.0711 12.025L12.2961 12.2583V12.9167L16.4627 17.075L17.7044 15.8333L13.5461 11.6667ZM8.54606 11.6667C6.47106 11.6667 4.79606 9.99167 4.79606 7.91667C4.79606 5.84167 6.47106 4.16667 8.54606 4.16667C10.6211 4.16667 12.2961 5.84167 12.2961 7.91667C12.2961 9.99167 10.6211 11.6667 8.54606 11.6667Z"
-                      fill="#C2CFE0"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="desksearchicon">
-                      <rect
-                        width="20"
-                        height="20"
-                        fill="white"
-                        transform="translate(0.629395)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
-              <input
-                type="search"
-                id="desktopsearch-field"
-                class="searchfield"
-                placeholder="Global search..."
-                autocomplete="off"
-              />
-
-              <div class="desktopsuggestion">
-                <ul class="suggestionlist">
-                  <li class="suggestionlist-item">Search Item One</li>
-                  <li class="suggestionlist-item">Search Item Two</li>
-                  <li class="suggestionlist-item">Search Item Three</li>
-                  <li class="suggestionlist-item">Search Item Four</li>
-                  <li class="suggestionlist-item">Search Item Five</li>
-                  <li class="suggestionlist-item">Search Item Six</li>
-                  <li class="suggestionlist-item">Search Item Seven</li>
-                  <li class="suggestionlist-item">Search Item Eight</li>
-                  <li class="suggestionlist-item">Search Item Nine</li>
-                  <li class="suggestionlist-item">Search Item Ten</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
+        <div class="desktopmenu justify-content-end">
           <div class="desknav">
             <div class="liveuplist">
               <button type="button" class="btn-live">
@@ -1422,9 +1282,7 @@
                       </div>
 
                       <div class="col-lg-6">
-                        <div class="mobile w-100">
-                          <input type="test" class="timepicker-ui-input inputfield w-100" value="12:00 AM" />
-                        </div>
+                        <input type="time" class="inputfield w-100">
                       </div>
                     </div>
                   </div>
@@ -1456,9 +1314,6 @@
     <!--  NICE-SELECT-2-->
     <script src="assets/js/nice-select/nice-select2.js"></script>
     <script src="assets/js/nice-select/insartpublish.js"></script>
-    <!-- SEARCH-SUGGESTIONS -->
-    <script src="assets/js/search-suggestion/mobsuggestion.js"></script>
-    <script src="assets/js/search-suggestion/desksuggestion.js"></script>
     <!-- CK-EDITOR (CDN) -->
     <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
     <script>
@@ -1467,17 +1322,6 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
     <script>
       flatpickr('.calendar')
-    </script>
-
-    <!-- TIME-PICKER (CDN) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker-ui/2.3.0/timepicker-ui.umd.js"></script>
-
-    <script>
-      const mobile = document.querySelector('.mobile');
-      const mobileTimepicker = new window.tui.TimepickerUI(mobile,{
-        mobile: true
-      });
-      mobileTimepicker.create();
     </script>
   </body>
 </html>
