@@ -94,6 +94,35 @@
           font-size: size(13);
         }
       }
+
+      .uploadvideobox {
+        position: relative;
+        
+        .infobox {
+          @include flex-center-column;
+          gap: size(20);
+          position: relative;
+          z-index: 100;
+        }
+
+        .viewbox {
+          position: absolute;
+          inset: 0;
+          overflow: hidden;
+          z-index: 1;
+
+          img {
+            position: relative;
+          }
+
+          .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba($black, 0.25);
+            z-index: 10;
+          }
+        }        
+      }
     }
 
     &-footer {

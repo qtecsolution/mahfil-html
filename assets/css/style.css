@@ -4628,6 +4628,7 @@ table.videotable tr td .dropdown .dropdown-toggle::after {
     flex-direction: row;
   }
 }
+
 .comments-content {
   display: flex;
   flex-direction: column;
@@ -4736,6 +4737,33 @@ table.videotable tr td .dropdown .dropdown-toggle::after {
 .publishform .rightinfo-body .info .text {
   color: hsl(223, 4%, 37%);
   font-size: 0.8125rem;
+}
+.publishform .rightinfo-body .uploadvideobox {
+  position: relative;
+}
+.publishform .rightinfo-body .uploadvideobox .infobox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 100;
+}
+.publishform .rightinfo-body .uploadvideobox .viewbox {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+.publishform .rightinfo-body .uploadvideobox .viewbox img {
+  position: relative;
+}
+.publishform .rightinfo-body .uploadvideobox .viewbox .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
 }
 .publishform .rightinfo-footer {
   display: flex;
